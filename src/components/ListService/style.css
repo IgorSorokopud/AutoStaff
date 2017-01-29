@@ -1,0 +1,111 @@
+.service {
+  width: 100%;
+  padding: 30px 0;
+  min-height: 400px;
+  background-color: #fff;
+}
+
+.service__item {
+  width: 94%;
+  height: 220px;
+  position: relative;
+  margin: 0 auto 30px auto;;
+  background-color: #faf9f7;
+  border: 1px solid #dfe1d9;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+.service__wrap-avatar {
+  width: 150px;
+  height: 150px;
+  float: left;
+  margin-left: 10px;
+  border: 1px solid #dfe1d9;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.service__wrap-avatar img {
+  height: 100%;
+}
+
+.service__description {
+  width: 83%;
+  height: 200px;
+  float: right;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.service__title, .service__title h2 {
+  margin: 10px;
+  text-align: center;
+}
+
+.service__specialization {
+  text-decoration: underline;
+}
+
+.service__skill {
+  width: 19%;
+  float: left;
+}
+
+.service__skill-list {
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+  padding-left: 10px;
+}
+
+.service__skill-item:before {
+  content: '- ';
+}
+
+.service__text {
+  width: 60%;
+  float: left;
+  font-style: italic;
+  color: #333;
+}
+
+.service__adress {
+  width: 20%;
+  float: right;
+  color: #1e905d;
+}
+
+.star-rating {
+  width: 80px;
+  height: 20px;
+  right: 15px;
+  top: 20px;
+  position: absolute;
+}
+
+.service__comment {
+  width: 80px;
+  height: 20px;
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+}
+
+.service__comment a {
+  color: #333;
+}
+
+.service__comment a:hover {
+  text-decoration: underline;
+}
+
+.service__button {
+  width: 28%;
+  margin: 100px auto 0 auto;
+}

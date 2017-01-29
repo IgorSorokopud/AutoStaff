@@ -1,0 +1,94 @@
+.footer {
+  width: 100%;
+  position: relative;
+  min-height: 200px;
+  background-color: #10784a;
+  padding: 35px;
+  box-sizing: border-box;
+}
+
+.footer__social {
+  width: 75%;
+  padding-top: 20px;
+}
+
+.footer__logo {
+  width: 200px;
+  display: block;
+}
+
+/* social */
+.social__list {
+  margin: 0;
+  padding: 0;
+}
+
+.social__item {
+  display: inline-block;;
+}
+
+.social__item a {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-right: 10px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.social__item a:hover {
+  background-color: #dfe1d9;
+}
+
+.social__icon {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 8px;
+  color: #10784a;
+  font-size: 1.5rem!important;
+}
+
+.footer__column {
+  width: 33%;
+  float: left;
+}
+
+.footer__github {
+  position: absolute;
+  font-size: 2rem;
+  bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.footer__github a {
+  color: #fff;
+}
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+}
+
+.footer__item {
+  line-height: 25px;
+  list-style: none;
+  color: #fff
+}
+
+.footer__item a:hover {
+  text-decoration: underline;
+}
+
+.footer__item a {
+  color: #fff;
+  margin-left: 10px;
+}

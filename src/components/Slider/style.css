@@ -1,0 +1,7 @@
+.slider__main .slick-dots {
+  bottom: 0;
+}
+
+.slider__main .slick-slide img {
+  max-height: 250px;
+}
