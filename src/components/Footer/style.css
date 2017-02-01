@@ -2,7 +2,7 @@
   width: 100%;
   position: relative;
   min-height: 200px;
-  background-color: #10784a;
+  background-color: #00b1b3;
   padding: 35px;
   box-sizing: border-box;
 }
@@ -49,7 +49,7 @@
   right: 0;
   text-align: center;
   top: 8px;
-  color: #10784a;
+  color: #00b1b3;
   font-size: 1.5rem!important;
 }
 

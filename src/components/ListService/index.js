@@ -5,6 +5,7 @@ import img1 from '../../images/ocean.jpg';
 import img2 from '../../images/matviy.jpeg';
 import img3 from '../../images/default_avatar.png';
 import Rating from '../../components/Rating/index';
+import { Link } from 'react-router';
 
 class ListService extends Component {
   render() {
@@ -42,8 +43,8 @@ class ListService extends Component {
                 <a href="#">Отзывы: { user.comment } </a>
               </div>
               <div className="service__button">
-                <a href="#" className="btn btn-them-border">Заказать услугу</a>
-                <a href="#" className="btn btn-them-border">Подробнее</a>
+                <Link to="/" className="btn btn-them-border">Заказать услугу</Link>
+                <Link to="/more" className="btn btn-them-border">Подробнее</Link>
               </div>
             </div>
           </div>

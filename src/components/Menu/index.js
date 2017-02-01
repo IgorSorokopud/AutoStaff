@@ -8,15 +8,20 @@ class Menu extends Component {
 
   render() {
     function handleSelect(info) {
-  console.log(info);
-  console.log(`selected ${info.key}`);
-}
+      console.log(info);
+      console.log(`selected ${info.key}`);
+    }
+
+    function handleSearch() {
+      console.log("good", this.elem.value);
+    }
 
     const commonMenu = (<MenuMain onSelect={handleSelect}>
     <SubMenu title={<span>Город</span>} key="1">
-      <MenuItem key="1-1">Киев</MenuItem>
+      <MenuItem key="1-1">
+      <input ref={(input) => {this.elem = input}} onChange={handleSearch} type='text' placeholder='Город...'/></MenuItem>
       <MenuItem key="1-2">Житомир</MenuItem>
-      <MenuItem key="1-3">Хмльницкий</MenuItem>
+      <MenuItem key="1-3">Хмельницкий</MenuItem>
       <MenuItem key="1-4">Кривой Рог</MenuItem>
       <MenuItem key="1-5">Бердичев</MenuItem>
       <MenuItem key="1-6">Днепр</MenuItem>

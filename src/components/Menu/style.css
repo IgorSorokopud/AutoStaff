@@ -363,14 +363,9 @@
   }
 }
 
-
-
-
-
 /* modifay menu */
-
 .rc-menu-horizontal {
-  background-color: #10784a;
+  background-color: #00b1b3;
 }
 
 .rc-menu-submenu-title {
@@ -387,14 +382,14 @@
 
 .rc-menu-item-active,
 .rc-menu-submenu-active > .rc-menu-submenu-title {
-  background-color: #1b905b;
+  background-color: #069b9c;
   border-color: #2ca05b;
 }
 
 .rc-menu-horizontal > .rc-menu-submenu-active,
 .rc-menu-horizontal > .rc-menu-item-active {
   border-bottom: 2px solid #fff;
-  background-color: #F3F5F7;
+  background-color: #069b9c;
 }
 
 .rc-menu-submenu-horizontal > .rc-menu {

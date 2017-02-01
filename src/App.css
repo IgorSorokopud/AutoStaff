@@ -47,28 +47,21 @@ img {
 
 .btn-them-green {
   margin-left: 10px;
-  background-color: #10784a;
-  border-color: #2faa60;
+  background-color: #00b1b3;
   color: #fff;
 }
 
 .btn-them-green:hover {
-  background-color: #1b905b;
-  border-color: #2ca05b;
-}
-
-.btn-them-green:active {
-  background-color: #2ca05b;
-  border-color: #279654;
+  background-color: #069b9c;
 }
 
 .btn-them-border {
-  color: #38ae67;
+  color: #00b1b3;
   margin-left: 10px;
-  border: 1px solid #38ae67;
+  border: 1px solid #00b1b3;
 }
 
 .btn-them-border:hover {
   color: #fff;
-  background-color: #10784a;
+  background-color: #00b1b3;
 }
