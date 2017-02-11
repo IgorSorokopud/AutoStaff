@@ -1,0 +1,35 @@
+.more {
+  padding: 30px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.service__wrapper {
+  overflow: hidden;
+}
+
+.more .service__wrap-avatar {
+  float: none;
+  margin: 0 auto;
+}
+
+.more .service__text {
+  width: 69%;
+  float: right;
+  line-height: 20px;
+  max-height: 400px;
+  -webkit-line-clamp: 40;
+}
+
+.more .service__adress {
+  float: none;
+  margin: 0 auto;
+}
+
+.more .service__skill {
+  width: 30%;
+}
+
+.more .service__skill-list li {
+  line-height: 20px;
+}

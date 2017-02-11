@@ -73,6 +73,14 @@
   float: left;
   font-style: italic;
   color: #333;
+  padding-left: 3px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 16px;
+  max-height: 80px;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 .service__adress {

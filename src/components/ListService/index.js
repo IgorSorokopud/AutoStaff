@@ -8,6 +8,7 @@ import Rating from '../../components/Rating/index';
 import { Link } from 'react-router';
 
 class ListService extends Component {
+
   render() {
     return (
       <div>
@@ -24,15 +25,15 @@ class ListService extends Component {
                 <span className="service__specialization">Специализация: {user.specialization}</span>
               </div>
               <div className="service__skill">
+              
                 <ul className="service__skill-list">
-
                     {user.options.map(function(list, index){
-                      return(
-                        <li className="service__skill-item" key={index}>{list}</li>
-                      )
+                      if(index < 7) {
+                        return(<li className="service__skill-item" key={index}>{list}</li>)
+                      }
                     })}
-
                 </ul>
+
               </div>
               <div className="service__text">{user.description}</div>
               <div className="service__adress">{user.addres}</div>
@@ -44,12 +45,12 @@ class ListService extends Component {
               </div>
               <div className="service__button">
                 <Link to="/" className="btn btn-them-border">Заказать услугу</Link>
-                <Link to="/more" className="btn btn-them-border">Подробнее</Link>
+                <Link to={`/more/${user.id}`}className="btn btn-them-border">Подробнее</Link>
               </div>
             </div>
           </div>
          )
-        })}
+        }.bind(this))}
         </div>
       </div>
     );

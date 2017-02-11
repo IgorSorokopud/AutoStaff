@@ -10,7 +10,6 @@ import ListService from './components/ListService/index';
 import Footer from './components/Footer/index';
 
 class App extends Component {
-
   render() {
     this.props.start();
     return (
