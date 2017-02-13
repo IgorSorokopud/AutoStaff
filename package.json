@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "react-modal-dialog": "^4.0.5",
     "react-scripts": "0.8.4",
     "slick-carousel": "^1.6.0"
   },

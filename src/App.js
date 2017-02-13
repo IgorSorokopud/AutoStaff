@@ -8,6 +8,7 @@ import SimpleSlider from './components/Slider/index';
 import Menu from './components/Menu/index';
 import ListService from './components/ListService/index';
 import Footer from './components/Footer/index';
+import Modal from './components/Modal/index';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
           <Menu />
           <ListService />
           <Footer />
+          <Modal />
         </div>
       </div>
     );

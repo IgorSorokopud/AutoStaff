@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { showModal } from '../../actions/modal';
 import logo from '../../images/main_logo.png';
 import './style.css';
 
 class Header extends Component {
 
   render() {
+
+    function login(data) {
+      this.props.modal({mode:data, isShowingModal:true});
+    }
+
     return (
       <div>
         <div className="header">
@@ -18,9 +24,9 @@ class Header extends Component {
 
               {/* buttons */}
               <div className="header__button">
-                <a href="/" className="btn btn-them-green">Войти</a>
-                <a href="/" className="btn btn-them-green">Заказать ремонт</a>
-                <a href="/" className="btn btn-them-green">Исполнитель</a>
+                <a href="#" onClick={login.bind(this, 'Login')} className="btn btn-them-green">Войти</a>
+                <a href="#" className="btn btn-them-green">Заказать ремонт</a>
+                <a href="#" onClick={login.bind(this, 'Performer')} className="btn btn-them-green">Исполнитель</a>
               </div>
           </div>
         </div>
@@ -30,8 +36,10 @@ class Header extends Component {
 }
 
 export default connect(
-  state => ({
-    hotBlog: state
-  }),
-  dispatch => ({})
+  state => ({}),
+  dispatch => ({
+    modal: (data) => {
+      dispatch(showModal(data));
+    }
+  })
 )(Header);

@@ -1,0 +1,50 @@
+.modal__title {
+  text-align: center;
+}
+
+.modal__form {
+  width: 400px;
+  text-align: center;
+}
+
+.modal__input {
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+  outline: 0 none;
+  border: 1px solid #d9d9d9;
+  font: 15px/18px Arial, sans-serif;
+  padding: 11px 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px #f2f2f2 inset;
+  -moz-box-shadow: 0 1px 2px #f2f2f2 inset;
+  box-shadow: 0 1px 2px #f2f2f2 inset;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: border-color 0.2s ease;
+  -moz-transition: border-color 0.2s ease;
+  -o-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+.modal .btn-them-border {
+  width: 50%;
+  display: block;
+  margin: 20px auto;
+}
+
+.modal__forgot-password {
+  display: inline-block;
+  text-align: center;
+  color: #00b1b3;
+}
+
+.modal__forgot-password:hover {
+  text-decoration: underline;
+}
+
+.modal .social__list {
+  text-align: center;
+}
