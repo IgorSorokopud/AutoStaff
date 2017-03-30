@@ -86,8 +86,6 @@ class Footer extends Component {
 }
 
 export default connect(
-  state => ({
-    hotBlog: state
-  }),
+  state => ({}),
   dispatch => ({})
 )(Footer);

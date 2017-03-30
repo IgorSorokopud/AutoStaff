@@ -22,11 +22,14 @@ class Header extends Component {
                 <img src={logo} alt="logo"/>
               </a>
 
+              <a href="#" className="header__hint">Как заказать ремонт</a>
+              <a href="#" className="header__hint">Как стать исполнителем</a>
+
               {/* buttons */}
               <div className="header__button">
-                <a href="#" onClick={login.bind(this, 'Login')} className="btn btn-them-green">Войти</a>
                 <a href="#" className="btn btn-them-green">Заказать ремонт</a>
                 <a href="#" onClick={login.bind(this, 'Performer')} className="btn btn-them-green">Исполнитель</a>
+                <a href="#" onClick={login.bind(this, 'Login')} className="btn btn-them-green">Войти</a>
               </div>
           </div>
         </div>

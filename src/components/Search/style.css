@@ -1,0 +1,25 @@
+.search {
+  width: 50%;
+  height: 220px;
+  position: relative;
+  margin: 30px 0;
+  background-color: #fff;
+  border: 1px solid #dfe1d9;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.search__radio {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.search__type-user-lable {
+  margin: 0 30px 0 5px;
+}
+
+.search__type-user {
+  /*margin-right: 50px;*/
+}
