@@ -9,6 +9,7 @@ import Menu from './components/Menu/index';
 import ListService from './components/ListService/index';
 import Footer from './components/Footer/index';
 import Modal from './components/Modal/index';
+import SimpleSlider from './components/Slider/index';
 
 class App extends Component {
   render() {
@@ -18,7 +19,7 @@ class App extends Component {
         <Header />
         <div className="main-wrapper">
           <Search />
-          <Menu />
+          <SimpleSlider />
           <ListService />
           <Footer />
           <Modal />

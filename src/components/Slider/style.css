@@ -1,7 +1,44 @@
+.slider__main {
+  margin: 30px 34px 0 0 ;
+  width: 46%;
+  float: right;
+  height: 220px;
+}
+
 .slider__main .slick-dots {
   bottom: 0;
 }
 
 .slider__main .slick-slide img {
-  max-height: 250px;
+  /*max-height: 250px;*/
+  height: 220px;
+  opacity: 0.7;
+  border-radius: 5px;
+}
+
+.slick-slide {
+  position: relative;
+}
+
+.slider__banner-content {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 60px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.slider__main .btn-them-border {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+  top: 140px;
+  max-width: 100px;
 }
