@@ -21,7 +21,6 @@ class More extends Component {
       <div>
         <Header />
         <div className="main-wrapper">
-          <SimpleSlider />
           <Menu />
 
             <div className="service more">
