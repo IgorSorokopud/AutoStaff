@@ -27,9 +27,9 @@ class Header extends Component {
 
               {/* buttons */}
               <div className="header__button">
-                <a href="#" className="btn btn-them-green">Заказать ремонт</a>
-                <a href="#" onClick={login.bind(this, 'Performer')} className="btn btn-them-green">Исполнитель</a>
-                <a href="#" onClick={login.bind(this, 'Login')} className="btn btn-them-green">Войти</a>
+                <a href="#" className="btn btn--primary">Заказать ремонт</a>
+                <a href="#" onClick={login.bind(this, 'Performer')} className="btn btn--primary">Исполнитель</a>
+                <a href="#" onClick={login.bind(this, 'Login')} className="btn btn--primary">Войти</a>
               </div>
           </div>
         </div>

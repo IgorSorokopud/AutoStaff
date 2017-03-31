@@ -2,6 +2,18 @@ html {
     font-size: 14px;
 }
 
+.test-color-scheme {
+    color: #2c2c2c;
+    color: #04233e;
+    color: #163866;
+    color: #0174c6;
+    color: #08c7fe;
+    color: #fd9220;
+    color: #bfc6cc;
+    color: #eeeeee;
+    color: #efefef;
+}
+
 body {
     background: #f5f5f5;
     line-height: 1.2;
@@ -69,4 +81,11 @@ img {
 .btn-them-border:hover {
     color: #fff;
     background-color: #00b1b3;
+}
+
+/*new*/
+
+.btn--primary {
+    background: #007eca;
+    color: #fff;
 }
