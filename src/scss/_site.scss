@@ -1,5 +1,5 @@
 .main-container {
-  padding-top: 50px;
+  padding: 50px 15px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -16,9 +16,17 @@
 }
 
 .main-content {
-  width: 70%;
+  width: 100%;
+
+  @include media(M) {
+    width: 70%;
+  }
 }
 
 .main-sidebar {
-  width: 30%;
+  width: 100%;
+
+  @include media(M) {
+    width: 30%;
+  }
 }
