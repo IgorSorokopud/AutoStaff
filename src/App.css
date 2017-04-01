@@ -116,6 +116,7 @@ img {
 .btn-them-border {
     color: #00b1b3;
     margin-left: 10px;
+    background: transparent;
     border: 1px solid #00b1b3;
 }
 
@@ -123,4 +124,3 @@ img {
     color: #fff;
     background-color: #00b1b3;
 }
-

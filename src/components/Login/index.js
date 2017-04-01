@@ -4,8 +4,45 @@ import './style.css';
 
 class Login extends Component {
 
-  render() {
+  state = {
+    password: '',
+    phone_email: ''
+  };
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    let key;
+    let autorisation = {};
+
+    for (key in this.state) {
+      if (!this.state[key]) {
+        styleValidation(key, 'red', 'invalid');
+      } else {
+        styleValidation(key, 'green', 'invalid');
+
+        autorisation[key] = this.state[key];
+        autorisation.registered = true;
+        window.location.reload();
+      }
+    }
+
+    this.setStorage(autorisation);
+
+    function styleValidation (name, color, text) {
+      let node = document.getElementsByName(name)[0];
+      node.style.border = '1px solid ' + color;
+    }
+  }
+
+  setStorage = (autorisation) => {
+    localStorage.setItem('autorisation', JSON.stringify(autorisation));
+  }
+
+  handleLogin = (event) => {
+    this.setState({[event.target.name]: event.target.value});
+  }
+
+  render() {
     return (
       <div className="modal">
         <h3 className="modal__title">Войти</h3>
@@ -36,10 +73,10 @@ class Login extends Component {
           </a>
           </li>
         </ul>
-        <form method="POST" actions="/" className="modal__form">
-          <input className="modal__input" type="text" name="phone_email" placeholder="E-mail или телефон"/>
-          <input className="modal__input" type="password" name="password" placeholder="Пароль"/>
-          <input type="submit" className="btn btn-them-border" value="Войти"/>
+        <form className="modal__form" onSubmit={this.handleSubmit}>
+          <input className="modal__input" onChange={this.handleLogin} type="text" name="phone_email" placeholder="Логин"/>
+          <input className="modal__input" onChange={this.handleLogin} type="password" name="password" placeholder="Пароль"/>
+          <input className="btn btn-them-border" type="submit" value="Войти"/>
           <a className="modal__forgot-password">Забыли пароль?</a>
         </form>
       </div>

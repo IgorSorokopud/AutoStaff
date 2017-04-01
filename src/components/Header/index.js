@@ -10,7 +10,12 @@ class Header extends Component {
 
     function login(data) {
       this.props.modal({mode:data, isShowingModal:true});
-    }
+    };
+
+    function clearStorage () {
+      localStorage.clear();
+      window.location.reload();
+    };
 
     return (
       <div>
@@ -26,11 +31,17 @@ class Header extends Component {
               <a href="#" className="header__hint">Как стать исполнителем</a>
 
               {/* buttons */}
-              <div className="header__button">
-                <a href="#" className="btn btn--primary">Заказать ремонт</a>
-                <a href="#" onClick={login.bind(this, 'Performer')} className="btn btn--primary">Исполнитель</a>
-                <a href="#" onClick={login.bind(this, 'Login')} className="btn btn--primary">Войти</a>
-              </div>
+              {this.props.state.startData.registered ?
+                <div className="header__button">
+                  {this.props.state.startData.autorisation.phone_email}
+                  <button onClick={clearStorage}>Выход</button>
+                </div> :
+                <div className="header__button">
+                  <a href="#" className="btn btn--primary">Заказать ремонт</a>
+                  <a href="#" onClick={login.bind(this, 'Performer')} className="btn btn--primary">Исполнитель</a>
+                  <a href="#" onClick={login.bind(this, 'Login')} className="btn btn--primary">Войти</a>
+                </div>
+              }
           </div>
         </div>
       </div>
@@ -39,7 +50,9 @@ class Header extends Component {
 }
 
 export default connect(
-  state => ({}),
+  state => ({
+    state: state
+  }),
   dispatch => ({
     modal: (data) => {
       dispatch(showModal(data));
