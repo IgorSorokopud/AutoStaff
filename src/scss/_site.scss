@@ -1,0 +1,32 @@
+.main-container {
+  padding: 50px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-row {
+  margin: 0 -15px;
+}
+
+.main-content,
+.main-sidebar {
+  box-sizing: border-box;
+  padding: 0 15px;
+  float: left;
+}
+
+.main-content {
+  width: 100%;
+
+  @include media(M) {
+    width: 70%;
+  }
+}
+
+.main-sidebar {
+  width: 100%;
+
+  @include media(M) {
+    width: 30%;
+  }
+}

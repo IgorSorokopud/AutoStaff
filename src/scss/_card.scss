@@ -1,0 +1,119 @@
+.card {
+  background: #fff;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 20px;
+  @include clearfix;
+
+  &__left {
+    box-sizing: border-box;
+    float: left;
+    position: absolute;
+    padding: 3px;
+    width: 30%;
+    height: 100%;
+  }
+
+  &__right {
+    width: 70%;
+    float: right;
+  }
+
+  &__thumb {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      height: auto;
+      max-height: 100%;
+      max-width: none;
+      min-height: 100%;
+      min-width: 100%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__content {
+    padding: 20px;
+  }
+
+  // content
+
+  &__title {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 22px;
+    color: $colorPrimary;
+  }
+
+  &__subtitle {
+    margin-bottom: 3px;
+    color: $colorAccent;
+  }
+
+  &__adress {
+    margin-bottom: 20px;
+    color: $colorNeutral;
+  }
+
+  &__excerpt {
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__description {
+    margin-bottom: 20px;
+    line-height: 20px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &-item {
+      background: #efefef;
+      margin: 0 5px 5px 0;
+      display: inline-block;
+      padding: 3px 5px;
+      font-size: 12px;
+    }
+  }
+
+  &__buttons {
+    padding-top: 10px;
+    margin-left: -10px;
+  }
+
+  &__corner {
+    width: 80px;
+    height: 20px;
+    right: 15px;
+    position: absolute;
+
+    &--top {
+      top: 20px;
+    }
+
+    &--bottom {
+      bottom: 20px;
+    }
+
+    a {
+      color: #333;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

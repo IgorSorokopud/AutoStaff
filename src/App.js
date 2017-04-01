@@ -5,7 +5,7 @@ import './App.css';
 
 import Header from './components/Header/index';
 import Search from './components/Search/index';
-import Menu from './components/Menu/index';
+import Sidebar from './components/Sidebar/Sidebar';
 import ListService from './components/ListService/index';
 import Footer from './components/Footer/index';
 import Modal from './components/Modal/index';
@@ -17,26 +17,20 @@ class App extends Component {
     return (
       <div>
         <Header />
-          <Search />
-          <SimpleSlider />
-          <div className="main-container">
-              <div className="main-row clear">
-                  <div className="main-content">
-                      <ListService />
-                  </div>
-                  <div className="main-sidebar">
-                      <div className="card">
-                          <div className="card__content">Sidebar</div>
-                          <div className="card__content">Content</div>
-                          <div className="card__content">footer</div>
-                      </div>
-                  </div>
+        <Search />
+        <SimpleSlider />
+        <div className="main-container">
+          <div className="main-row clear">
+              <div className="main-content">
+                  <ListService />
+              </div>
+              <div className="main-sidebar">
+                  <Sidebar />
               </div>
           </div>
-        <div className="main-wrapper">
-          <Footer />
-          <Modal />
         </div>
+        <Footer />
+        <Modal />
       </div>
     );
   }

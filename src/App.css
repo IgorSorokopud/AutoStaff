@@ -1,16 +1,3 @@
-.test-color-scheme {
-    color: #2c2c2c;
-    color: #04233e;
-    color: #163866;
-    color: #0174c6;
-    color: #08c7fe;
-    color: #fd9220;
-    color: #bfc6cc;
-    color: #eeeeee;
-    color: #efefef;
-    color: #CF1916;
-}
-
 html {
     font-size: 14px;
 }
@@ -49,55 +36,7 @@ img {
 
 /* Grid system */
 
-.main-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.main-row {
-    margin: 0 -15px;
-}
-
-.main-content,
-.main-sidebar {
-    box-sizing: border-box;
-    padding: 0 15px;
-    float: left;
-}
-
-.main-content {
-    width: 70%;
-}
-
-.main-sidebar {
-    width: 30%;
-}
-
 /*  Button  */
-
-.btn {
-    border-radius: 3px;
-    border: 1px solid transparent;
-    padding: 6px 10px;
-    font-family: 'PT Sans Caption', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: center;
-    vertical-align: middle;
-    touch-action: manipulation;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.btn--primary {
-    background: #007eca;
-    color: #fff;
-}
-
-.btn--ghost {
-    border: 1px solid #007eca;
-    color: #007eca;
-}
 
 
 /* old buttons */
