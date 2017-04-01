@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.css';
-import img1 from '../../images/ocean.jpg';
-import img2 from '../../images/matviy.jpeg';
-import img3 from '../../images/default_avatar.png';
+import defaultAvatar from '../../images/default_avatar.png';
 import Rating from '../../components/Rating/index';
 import { Link } from 'react-router';
 
 class ListService extends Component {
-
   render() {
     return (
       <div>
@@ -17,7 +14,7 @@ class ListService extends Component {
         return(
           <div className="service__item" key={index}>
             <div className="service__wrap-avatar">
-              <img src={img3}/>
+              <img src={user.photo}/>
             </div>
             <div className="service__description">
               <div className="service__title">
