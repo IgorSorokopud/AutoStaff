@@ -30,36 +30,37 @@ class More extends Component {
                 <div className="card__content">
                   <div className="card__title">{userMore.name} {userMore.surname}</div>
                   <div className="card__subtitle">Специализация: {userMore.specialization}</div>
+                  <div className="card__adress">{userMore.addres}</div>
                   <div className="card__description">{userMore.description}</div>
-                  <div>{userMore.addres}</div>
                   <ul className="card__list">
                     {userMore.options.map(function(list, index){
                       return(<li className="card__list-item" key={index}>{list}</li>)
                     })}
                   </ul>
-                  <div className="star-rating">
+                  <div className="card__corner card__corner--top">
                     <Rating />
                   </div>
-                  <div className="service__comment">
+                  <div className="card__corner card__corner card__corner--bottom">
                     <a href="#">Отзывы: { userMore.comment } </a>
                   </div>
-                  <div className="service__button">
-                    <Link to="" className="btn btn--ghost">Заказать услугу</Link>
-                    <Link to="/" className="btn btn--ghost">Назад</Link>
+                  <div className="card__buttons">
+                    <Link to="" className="btn btn--link">Заказать услугу</Link>
+                    <Link to="/" className="btn btn--link">Назад</Link>
                   </div>
                 </div>
               </div>
 
             </div>
+
             <div className="main-sidebar">
+              <div className="card">
+                <div className="card__content">
+                  <img src={img3}/>
+                </div>
+              </div>
               <Sidebar />
             </div>
-          </div>
-        </div>
 
-        <div className="service more">
-          <div className="service__wrap-avatar">
-            <img src={img3}/>
           </div>
         </div>
 

@@ -17,20 +17,20 @@ class App extends Component {
     return (
       <div>
         <Header />
-          <Search />
-          <SimpleSlider />
-          <div className="main-container">
-              <div className="main-row clear">
-                  <div className="main-content">
-                      <ListService />
-                  </div>
-                  <div className="main-sidebar">
-                      <Sidebar />
-                  </div>
+        <Search />
+        <SimpleSlider />
+        <div className="main-container">
+          <div className="main-row clear">
+              <div className="main-content">
+                  <ListService />
+              </div>
+              <div className="main-sidebar">
+                  <Sidebar />
               </div>
           </div>
-          <Footer />
-          <Modal />
+        </div>
+        <Footer />
+        <Modal />
       </div>
     );
   }

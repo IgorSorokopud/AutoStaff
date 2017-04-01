@@ -13,13 +13,17 @@
   white-space: nowrap;
 
   &--primary {
-    background: #007eca;
+    background: $colorSecondary;
     color: #fff;
   }
 
   &--ghost {
-    border: 1px solid #007eca;
-    color: #007eca;
+    border: 1px solid $colorSecondary;
+    color: $colorSecondary;
+  }
+
+  &--link {
+    color: $colorSecondary;
   }
 
 }

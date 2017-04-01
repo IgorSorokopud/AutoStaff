@@ -22,6 +22,7 @@ class ListService extends Component {
                 <div className="card__content">
                     <Link to={`/more/${user.id}`} className="card__title">{user.name} {user.surname}</Link>
                     <div className="card__subtitle">Специализация: {user.specialization}</div>
+                    <div className="card__adress">{user.addres}</div>
                     <div className="card__excerpt">{user.description}</div>
                     <ul className="card__list">
                         {user.options.map(function(list, index){
@@ -30,16 +31,15 @@ class ListService extends Component {
                             }
                         })}
                     </ul>
-                    <div>{user.addres}</div>
-                    <div className="star-rating">
+                    <div className="card__corner card__corner--top">
                         <Rating />
                     </div>
-                    <div className="service__comment">
+                    <div className="card__corner card__corner--bottom">
                         <a href="#">Отзывы: { user.comment } </a>
                     </div>
-                    <div className="service__button">
-                        <Link to="/" className="btn btn--ghost">Заказать услугу</Link>
-                        <Link to={`/more/${user.id}`}className="btn btn--ghost">Подробнее</Link>
+                    <div className="card__buttons">
+                        <Link to="/" className="btn btn--link">Заказать услугу</Link>
+                        <Link to={`/more/${user.id}`}className="btn btn--link">Подробнее</Link>
                     </div>
                 </div>
             </div>
