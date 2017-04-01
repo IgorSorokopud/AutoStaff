@@ -1,5 +1,18 @@
 // Breakpoints
 
+.test-color-scheme {
+  color: #2c2c2c;
+  color: #04233e;
+  color: #163866;
+  color: #0174c6;
+  color: #08c7fe;
+  color: #fd9220;
+  color: #bfc6cc;
+  color: #eeeeee;
+  color: #efefef;
+  color: #CF1916;
+}
+
 $XS: 420px;
 $S: 508px;
 $M: 769px;
@@ -12,10 +25,10 @@ $XXL: 1792px;
 $backgroundPrimary: rgba(#000, 1);
 $font: 'Roboto', sans-serif;
 
-$colorPrimary: #fff;
-$colorSecondary: #0e0e0e;
-$colorTertiary: #222;
-$colorDefault: #000;
+$colorPrimary: #163866;
+$colorSecondary: #0174c6;
+$colorTertiary: #08c7fe;
+$colorDefault: #2c2c2c;
 
 $siteMarginBottom: 60px;
 $sitePaddings: 45px;

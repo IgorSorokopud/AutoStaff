@@ -1,0 +1,25 @@
+.btn {
+  border-radius: 3px;
+  border: 1px solid transparent;
+  display: inline-block;
+  padding: 6px 10px;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  white-space: nowrap;
+
+  &--primary {
+    background: #007eca;
+    color: #fff;
+  }
+
+  &--ghost {
+    border: 1px solid #007eca;
+    color: #007eca;
+  }
+
+}

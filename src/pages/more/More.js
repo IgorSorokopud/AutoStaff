@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../../components/Header/index';
-import SimpleSlider from '../../components/Slider/index';
+import Sidebar from '../../components/Sidebar/Sidebar';
 import Menu from '../../components/Menu/index';
 import Footer from '../../components/Footer/index';
 import { connect } from 'react-redux';
@@ -23,36 +23,44 @@ class More extends Component {
         <div className="main-wrapper">
           <Menu />
 
+          <div className="main-container">
+            <div className="main-row clear">
+              <div className="main-content">
+
+                <div className="card">
+                  <div className="card__content">
+                    <div className="card__title">{userMore.name} {userMore.surname}</div>
+                    <div className="card__subtitle">Специализация: {userMore.specialization}</div>
+                    <div className="card__description">{userMore.description}</div>
+                    <div>{userMore.addres}</div>
+                    <ul className="card__list">
+                      {userMore.options.map(function(list, index){
+                        return(<li className="card__list-item" key={index}>{list}</li>)
+                      })}
+                    </ul>
+                    <div className="star-rating">
+                      <Rating />
+                    </div>
+                    <div className="service__comment">
+                      <a href="#">Отзывы: { userMore.comment } </a>
+                    </div>
+                    <div className="service__button">
+                      <Link to="" className="btn btn--ghost">Заказать услугу</Link>
+                      <Link to="/" className="btn btn--ghost">Назад</Link>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div className="main-sidebar">
+                <Sidebar />
+              </div>
+            </div>
+          </div>
+
             <div className="service more">
               <div className="service__wrap-avatar">
                 <img src={img3}/>
-              </div>
-              <div className="service__title">
-                <h2>{userMore.name} {userMore.surname}</h2>
-                <span className="service__specialization">Специализация: {userMore.specialization}</span>
-              </div>
-
-              <div className="service__wrapper">
-                <div className="service__skill">
-                  <ul className="service__skill-list">
-                    {userMore.options.map(function(list, index){
-                      return(<li className="service__skill-item" key={index}>{list}</li>)
-                    })}
-                  </ul>
-                </div>
-                <div className="service__text">{userMore.description}</div>
-              </div>
-
-              <div className="service__adress">{userMore.addres}</div>
-              <div className="star-rating">
-                <Rating />
-              </div>
-              <div className="service__comment">
-                <a href="#">Отзывы: { userMore.comment } </a>
-              </div>
-              <div className="service__button">
-                <Link to="" className="btn btn--ghost">Заказать услугу</Link>
-                <Link to="/" className="btn btn--ghost">Назад</Link>
               </div>
             </div>
 
