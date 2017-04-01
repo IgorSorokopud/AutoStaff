@@ -24,18 +24,14 @@ class ListService extends Component {
                 <h2>{user.name} {user.surname}</h2>
                 <span className="service__specialization">Специализация: {user.specialization}</span>
               </div>
-              <div className="service__skill">
-              
-                <ul className="service__skill-list">
+              <div className="service__excerpt">{user.description}</div>
+                <ul className="service__skill">
                     {user.options.map(function(list, index){
-                      if(index < 7) {
-                        return(<li className="service__skill-item" key={index}>{list}</li>)
-                      }
+                        if(index < 7) {
+                            return(<li className="service__skill-item" key={index}>{list}</li>)
+                        }
                     })}
                 </ul>
-
-              </div>
-              <div className="service__text">{user.description}</div>
               <div className="service__adress">{user.addres}</div>
               <div className="star-rating">
                 <Rating />
@@ -44,8 +40,8 @@ class ListService extends Component {
                 <a href="#">Отзывы: { user.comment } </a>
               </div>
               <div className="service__button">
-                <Link to="/" className="btn btn-them-border">Заказать услугу</Link>
-                <Link to={`/more/${user.id}`}className="btn btn-them-border">Подробнее</Link>
+                <Link to="/" className="btn btn--ghost">Заказать услугу</Link>
+                <Link to={`/more/${user.id}`}className="btn btn--ghost">Подробнее</Link>
               </div>
             </div>
           </div>
