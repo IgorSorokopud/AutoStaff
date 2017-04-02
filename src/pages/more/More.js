@@ -11,7 +11,6 @@ class More extends Component {
   render() {
     let currentMore = this.props.ownProps.params.id;
     let userMore = this.props.users.users[currentMore];
-    console.log(userMore);
     return(
       <div>
         <Header />

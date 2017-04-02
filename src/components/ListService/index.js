@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.css';
-import defaultAvatar from '../../images/default_avatar.png';
+import defaultAvatar from '../../images/ocean.jpg';
 import Rating from '../../components/Rating/index';
 import { Link } from 'react-router';
 

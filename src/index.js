@@ -10,7 +10,8 @@ import App from './App';
 import './index.css';
 import './favicon/css/font-awesome.css';
 import reducer from './reducers';
-import More from './pages/more/More'
+import More from './pages/more/More';
+import Manual from './pages/manual/Manual'
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
@@ -22,6 +23,7 @@ ReactDOM.render(
     <Router history={history}>
       <Route path="/" component={App}/>
       <Route path="/more/:id" component={More} />
+      <Route path="/manual" component={Manual} />
     </Router>
   </Provider>,
   document.getElementById('root')

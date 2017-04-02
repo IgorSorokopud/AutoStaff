@@ -1,0 +1,20 @@
+.manual {
+  text-align: center;
+}
+
+.manual__img {
+  width: 45%;
+  float: left;
+}
+
+.manual__title {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.manual_stap {
+  width: 45%;
+  float: right;
+  padding: 10px;
+  background-color: #efefef;
+}

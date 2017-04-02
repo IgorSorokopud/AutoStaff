@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { showModal } from '../../actions/modal';
 import logo from '../../images/main_logo.png';
+import { Link } from 'react-router';
 import './style.css';
 
 class Header extends Component {
@@ -27,8 +28,8 @@ class Header extends Component {
                 <img src={logo} alt="logo"/>
               </a>
 
-              <a href="#" className="header__hint">Как заказать ремонт</a>
-              <a href="#" className="header__hint">Как стать исполнителем</a>
+              <Link to={`/manual?customer`} className="header__hint">Как заказать ремонт</Link>
+              <Link to={`/manual?performer`} className="header__hint">Как стать исполнителем</Link>
 
               {/* buttons */}
               {this.props.state.startData.registered ?
