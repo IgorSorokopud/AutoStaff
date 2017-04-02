@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
 import Header from '../../components/Header/index';
 import Sidebar from '../../components/Sidebar/Sidebar';
-import Menu from '../../components/Menu/index';
 import Footer from '../../components/Footer/index';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import Rating from '../../components/Rating/index';
 import './style.css';
-
-import img1 from '../../images/ocean.jpg';
-import img2 from '../../images/matviy.jpeg';
-import img3 from '../../images/default_avatar.png';
 
 class More extends Component {
   render() {
@@ -20,7 +15,6 @@ class More extends Component {
     return(
       <div>
         <Header />
-        <Menu />
 
         <div className="main-container">
           <div className="main-row clear">
@@ -55,7 +49,7 @@ class More extends Component {
             <div className="main-sidebar">
               <div className="card">
                 <div className="card__content">
-                  <img src={img3}/>
+                  <img src={userMore.photo}/>
                 </div>
               </div>
               <Sidebar />

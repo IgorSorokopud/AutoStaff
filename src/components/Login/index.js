@@ -6,27 +6,31 @@ class Login extends Component {
 
   state = {
     password: '',
-    phone_email: ''
+    name: ''
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    let key;
-    let autorisation = {};
+    let key,
+        autorisation = {},
+        hasError = false;
 
     for (key in this.state) {
       if (!this.state[key]) {
+        hasError = true;
         styleValidation(key, 'red', 'invalid');
       } else {
         styleValidation(key, 'green', 'invalid');
 
         autorisation[key] = this.state[key];
         autorisation.registered = true;
-        window.location.reload();
       }
     }
 
-    this.setStorage(autorisation);
+    if(!hasError) {
+      this.setStorage(autorisation);
+      window.location.reload();
+    }
 
     function styleValidation (name, color, text) {
       let node = document.getElementsByName(name)[0];
@@ -74,7 +78,7 @@ class Login extends Component {
           </li>
         </ul>
         <form className="modal__form" onSubmit={this.handleSubmit}>
-          <input className="modal__input" onChange={this.handleLogin} type="text" name="phone_email" placeholder="Логин"/>
+          <input className="modal__input" onChange={this.handleLogin} type="text" name="name" placeholder="Логин"/>
           <input className="modal__input" onChange={this.handleLogin} type="password" name="password" placeholder="Пароль"/>
           <input className="btn btn-them-border" type="submit" value="Войти"/>
           <a className="modal__forgot-password">Забыли пароль?</a>

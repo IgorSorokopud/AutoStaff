@@ -33,11 +33,11 @@ class Header extends Component {
               {/* buttons */}
               {this.props.state.startData.registered ?
                 <div className="header__button">
-                  {this.props.state.startData.autorisation.phone_email}
+                  {this.props.state.startData.autorisation.name}
                   <button onClick={clearStorage}>Выход</button>
                 </div> :
                 <div className="header__button">
-                  <a href="#" className="btn btn--primary">Заказать ремонт</a>
+                  <a href="#" onClick={login.bind(this, 'Customer')} className="btn btn--primary">Заказать ремонт</a>
                   <a href="#" onClick={login.bind(this, 'Performer')} className="btn btn--primary">Исполнитель</a>
                   <a href="#" onClick={login.bind(this, 'Login')} className="btn btn--primary">Войти</a>
                 </div>

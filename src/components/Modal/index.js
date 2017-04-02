@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import React, {PropTypes} from 'react';
 import {ModalContainer, ModalDialog} from 'react-modal-dialog';
 import { showModal } from '../../actions/modal';
-import Login from '../../components/Login'
-import Performer from '../../components/Performer'
+import Login from '../../components/Login';
+import Performer from '../../components/Performer';
+import Customer from '../../components/Customer'
 
 class Modal extends React.Component {
 
@@ -17,6 +18,9 @@ class Modal extends React.Component {
         break;
       case "Performer":
         return <Performer />
+        break;
+      case "Customer":
+        return <Customer />
         break;
         default:
     }
