@@ -42,7 +42,7 @@
   }
 
   &__content {
-    padding: 20px;
+    padding: 20px 40px;
   }
 
   // content
@@ -55,7 +55,6 @@
 
   &__subtitle {
     margin-bottom: 3px;
-    color: $colorAccent;
   }
 
   &__adress {
@@ -97,7 +96,7 @@
   &__corner {
     width: 80px;
     height: 20px;
-    right: 15px;
+    right: 40px;
     position: absolute;
 
     &--top {
