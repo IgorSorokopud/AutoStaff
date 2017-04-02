@@ -9,7 +9,6 @@
 
 .order__content {
   padding: 20px;
-  background-color: #efefef;
 }
 
 .order__input-item {
@@ -18,4 +17,10 @@
 
 .order__input-item label {
   margin-right: 10px;
+}
+
+.order__textarea {
+  width: 70%;
+  border-radius: 3px;
+  min-height: 100px;
 }
