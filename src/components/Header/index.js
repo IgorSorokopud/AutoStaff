@@ -24,6 +24,11 @@ class Header extends Component {
                 <div className="header__container">
                     <a href="#" className="header__hint">Как заказать ремонт</a>
                     <a href="#" className="header__hint">Как стать исполнителем</a>
+                    <div className="header__social">
+                        <a href="#" className="fa fa-facebook"></a>
+                        <a href="#" className="fa fa-twitter"></a>
+                        <a href="#" className="fa fa-google-plus"></a>
+                    </div>
                 </div>
             </div>
 
