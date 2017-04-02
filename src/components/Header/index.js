@@ -21,15 +21,26 @@ class Header extends Component {
     return (
       <div>
         <div className="header">
-          <div className="header__wrapper clear">
+
+            <div className="header__top">
+                <div className="header__container">
+                <Link to={`/manual?customer`} className="header__hint">Как заказать ремонт</Link>
+                <Link to={`/manual?performer`} className="header__hint">Как стать исполнителем</Link>
+
+      <div className="header__social">
+                        <a href="#" className="fa fa-facebook"></a>
+                        <a href="#" className="fa fa-twitter"></a>
+                        <a href="#" className="fa fa-google-plus"></a>
+                    </div>
+                </div>
+            </div>
+
+          <div className="header__container">
 
               {/* logo */}
               <a href="/" className="header__logo">
                 <img src={logo} alt="logo"/>
               </a>
-
-              <Link to={`/manual?customer`} className="header__hint">Как заказать ремонт</Link>
-              <Link to={`/manual?performer`} className="header__hint">Как стать исполнителем</Link>
 
               {/* buttons */}
               {this.props.state.startData.registered ?

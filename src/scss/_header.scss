@@ -1,0 +1,58 @@
+.header {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #efefef;
+
+  &__container {
+    padding: 5px 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include clearfix;
+  }
+
+  &__top {
+    border-bottom: 1px solid #efefef;
+  }
+
+  &__logo {
+    float: left;
+    padding: 20px 0;
+    width: 200px;
+    display: block;
+  }
+
+  &__logo img {
+    width: 100%;
+  }
+
+  &__social {
+    float: right;
+    padding-top: 10px;
+
+    a {
+      color: $colorNeutral;
+      margin-left: 25px;
+      font-size: 16px;
+    }
+  }
+
+  &__hint {
+    margin-right: 30px;
+    line-height: 35px;
+    color: $colorNeutral;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__buttons {
+    float: right;
+    padding-top: 22px;
+
+    a {
+      margin-left: 10px;
+    }
+  }
+}
