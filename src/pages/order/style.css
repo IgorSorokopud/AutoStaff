@@ -1,0 +1,21 @@
+.order__title {
+  text-align: center;
+}
+
+.order__container {
+  width: 33%;
+  float: left;
+}
+
+.order__content {
+  padding: 20px;
+  background-color: #efefef;
+}
+
+.order__input-item {
+  margin-bottom: 20px;
+}
+
+.order__input-item label {
+  margin-right: 10px;
+}

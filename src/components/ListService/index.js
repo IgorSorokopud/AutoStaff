@@ -38,8 +38,8 @@ class ListService extends Component {
                         <a href="#">Отзывы: { user.comment } </a>
                     </div>
                     <div className="card__buttons">
-                        <Link to="/" className="btn btn--link">Заказать услугу</Link>
-                        <Link to={`/more/${user.id}`}className="btn btn--link">Подробнее</Link>
+                        <Link to={`/order`}className="btn btn--link">Заказать услугу</Link>
+                        <Link to={`/more/${user.id}`} className="btn btn--link">Подробнее</Link>
                     </div>
                 </div>
             </div>
