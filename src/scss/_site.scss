@@ -2,6 +2,7 @@
   padding: 0 15px 30px;
   max-width: 1200px;
   margin: 0 auto;
+  @include clearfix;
 }
 
 .main-row {
@@ -29,4 +30,14 @@
   @include media(M) {
     width: 30%;
   }
+}
+
+.main-home-left {
+  float: left;
+  width: 30%;
+}
+
+.main-home-right {
+  float: left;
+  width: 70%;
 }

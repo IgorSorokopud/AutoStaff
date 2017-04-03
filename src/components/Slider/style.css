@@ -1,5 +1,5 @@
 .slider__main {
-  height: 220px;
+  height: 285px;
 }
 
 .slider__main .slick-dots {
@@ -7,7 +7,7 @@
 }
 
 .slider__main .slick-slide img {
-  height: 220px;
+  height: 285px;
   opacity: 0.7;
 }
 
@@ -36,4 +36,16 @@
   left: 0;
   top: 140px;
   max-width: 100px;
+}
+
+.slick-arrow {
+  z-index: 10;
+}
+
+.slick-prev {
+  left: 25px;
+}
+
+.slick-next {
+  right: 25px;
 }
