@@ -37,7 +37,7 @@ class More extends Component {
                                         <a href="#">Отзывы: { userMore.comment } </a>
                                     </div>
                                     <div className="card__buttons">
-                                        <Link to="" className="btn btn--link">Заказать услугу</Link>
+                                        <Link to={`/order`}className="btn btn--link">Заказать услугу</Link>
                                         <Link to="/" className="btn btn--link">Назад</Link>
                                     </div>
                                 </div>

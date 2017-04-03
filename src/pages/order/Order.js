@@ -51,19 +51,22 @@ class Order extends Component {
                                             </select>
                                         </div>
 
-                                        <label for="order__year" className="">Тип услуги</label>
-                                        <div className="form__select">
-                                            <select id="order__year">
-                                                <option selected>Тип услуги</option>
-                                                <option>Мотор</option>
-                                                <option>Кузовные работы</option>
-                                                <option>Электрика</option>
-                                            </select>
-                                        </div>
+                                        <label for="order__vin" className="">Vin-код</label>
+                                        <input type="text" name="vin"/>
 
                                     </div>
 
                                     <div className="form__col-50">
+                                        <label for="order__year" className="">Тип услуги</label>
+                                          <div className="form__select">
+                                              <select id="order__year">
+                                                  <option selected>Тип услуги</option>
+                                                  <option>Мотор</option>
+                                                  <option>Кузовные работы</option>
+                                                  <option>Электрика</option>
+                                                </select>
+                                              </div>
+
                                         <label for="order__year" className="">Запчасти</label>
                                         <div className="form__select">
                                             <select id="order__year">
@@ -74,9 +77,6 @@ class Order extends Component {
                                         </div>
 
                                         <label for="order__vin" className="">Дата</label>
-                                        <input type="text" name="vin"/>
-
-                                        <label for="order__vin" className="">Vin-код</label>
                                         <input type="text" name="vin"/>
 
                                         <label>Опишите что нужно делать...</label>
