@@ -80,6 +80,12 @@ class Order extends Component {
                           </div>
                       </div>
 
+                      <textarea className="order__textarea" placeholder="Опишите что нужно делать...">
+                      </textarea>
+
+                      <a href="#" className="btn btn--primary">Создать</a>
+                      <a href="#" className="btn btn--primary">Отмена</a>
+
                       </form>
                   </div>
                   <div className=""></div>
