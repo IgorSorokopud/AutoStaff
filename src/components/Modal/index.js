@@ -4,8 +4,7 @@ import React, {PropTypes} from 'react';
 import {ModalContainer, ModalDialog} from 'react-modal-dialog';
 import { showModal } from '../../actions/modal';
 import Login from '../../components/Login';
-import Performer from '../../components/Performer';
-import Customer from '../../components/Customer'
+import Registration from '../../components/Registration'
 
 class Modal extends React.Component {
 
@@ -16,11 +15,8 @@ class Modal extends React.Component {
       case "Login":
         return <Login />
         break;
-      case "Performer":
-        return <Performer />
-        break;
-      case "Customer":
-        return <Customer />
+      case "Registration":
+        return <Registration />
         break;
         default:
     }

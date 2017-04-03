@@ -49,9 +49,7 @@ class Header extends Component {
                                 <a href="#" onClick={clearStorage} className="btn btn--primary">Выйти</a>
                             </div> :
                             <div className="header__buttons">
-                                <a href="#" onClick={login.bind(this, 'Customer')} className="btn btn--primary">Заказать
-                                    ремонт</a>
-                                <a href="#" onClick={login.bind(this, 'Performer')} className="btn btn--primary">Исполнитель</a>
+                                <a href="#" onClick={login.bind(this, 'Registration')} className="btn btn--primary">Регистрация</a>
                                 <a href="#" onClick={login.bind(this, 'Login')} className="btn btn--primary">Войти</a>
                             </div>
                         }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Best from '../../components/Best/index';
 
 class Sidebar extends Component {
 
@@ -6,8 +7,7 @@ class Sidebar extends Component {
         return (
             <div className="card">
                 <div className="card__content">Лучшие исполнители</div>
-                <div className="card__content">Content</div>
-                <div className="card__content">footer</div>
+                <Best />
             </div>
         );
     }
