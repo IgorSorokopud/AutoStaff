@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.css';
 
-class Performer extends Component {
+class Registration extends Component {
 
   state = {
     name:'',
@@ -19,8 +19,8 @@ class Performer extends Component {
 
     for (key in this.state) {
       if (!this.state[key]) {
-        hasError = true;
         styleValidation(key, 'red', 'invalid');
+        hasError = true;
       } else {
         styleValidation(key, 'green', 'invalid');
 
@@ -49,9 +49,17 @@ class Performer extends Component {
   }
 
   render() {
+
     return (
       <div className="modal">
-        <h3 className="modal__title">Зарегестрироваться как исполнитель</h3>
+          <h3 className="modal__title">Регистрация</h3>
+
+          <input type="radio" id="registration__executor" className="registration__type-user" name="executor" value="executor"/>
+          <label for="registration__executor" className="registration__type-user-lable">Исполнитель</label>
+
+          <input type="radio" id="registration__performer" className="registration__type-user" name="executor" value="executor"/>
+          <label for="registration__performer" className="performer__type-user-lable">Заказчик</label>
+
         <ul className="social__list">
           <li className="social__item">
           <a href="#">
@@ -96,4 +104,4 @@ class Performer extends Component {
 export default connect(
   state => ({}),
   dispatch => ({})
-)(Performer);
+)(Registration);
