@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {showModal} from '../../actions/modal';
 import logo from '../../images/avtostaff.svg';
+import defaultAvatar from '../../images/default_avatar.png';
 import {Link} from 'react-router';
 import './style.css';
 
@@ -45,6 +46,9 @@ class Header extends Component {
                         {this.props.state.startData.registered ?
                             <div className="header__buttons">
                                 {this.props.state.startData.autorisation.name}
+                                <div className="header__userpic">
+                                    <img src={defaultAvatar}/>
+                                </div>
                                 <a href="#" className="btn btn--primary">Подать заявку</a>
                                 <a href="#" onClick={clearStorage} className="btn btn--primary">Выйти</a>
                             </div> :
