@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import './style.css';
 import img from '../../images/images1.jpeg';
 import banner from '../../images/banner.png';
+import bannerA from './img/servicio.jpg';
 
 var Slider = require('react-slick');
 
@@ -20,12 +21,14 @@ var SimpleSlider = React.createClass({
     return (
       <div className="slider__main">
         <Slider {...settings}>
-          <div>
-            <img src={banner}/>
+          <div className="slider__item">
+            <img className="slider__item-img" src={bannerA}/>
             <div className="slider__banner-content">Скидка 5% при заказе автозапчастей</div>
             <a href="#" className="btn btn-them-border">Подробнее</a>
           </div>
-          <div><img src={img}/></div>
+          <div>
+            <img src={img}/>
+          </div>
         </Slider>
       </div>
     );

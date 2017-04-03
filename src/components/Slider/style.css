@@ -2,17 +2,27 @@
   height: 285px;
 }
 
+.slider__item {
+  position: relative;
+  height: 285px;
+  overflow: hidden;
+}
+
+.slider__item-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  /*max-height: 100%;*/
+  max-width: none;
+  min-height: 100%;
+  min-width: 100%;
+  transform: translate(-50%, -50%);
+}
+
 .slider__main .slick-dots {
   bottom: 0;
-}
-
-.slider__main .slick-slide img {
-  height: 285px;
-  opacity: 0.7;
-}
-
-.slick-slide {
-  position: relative;
 }
 
 .slider__banner-content {
