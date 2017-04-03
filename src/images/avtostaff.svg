@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="435px" height="96px" viewBox="0 0 435 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <text id="AvtoStaff" font-family="Montserrat-Bold, Montserrat" font-size="72" font-weight="bold">
+                <tspan x="82.156" y="74" fill="#767676">Avto</tspan>
+                <tspan x="252.868" y="74" fill="#282828">Staff</tspan>
+            </text>
+            <g id="pagination-arrows" transform="translate(0.000000, 21.000000)" fill="#006DF0">
+                <path d="M63.7817561,29.9936 L52.9175122,40.7936 C52.0128293,41.6928 50.7829756,42.2 49.5016098,42.2 C48.2202439,42.2 46.9903902,41.6944 46.0873171,40.7936 L35.2214634,29.9936 C33.336439,28.12 33.336439,25.08 35.2214634,23.2064 C37.1064878,21.3312 40.1650244,21.3312 42.0500488,23.2064 L44.999122,26.1376 C44.2457561,17.1152 36.6348293,10 27.3658537,10 C17.6042927,10 9.65853659,17.896 9.65853659,27.6 C9.65853659,37.3024 17.6042927,45.2 27.3658537,45.2 C30.0332195,45.2 32.195122,47.3488 32.195122,50 C32.195122,52.6512 30.0332195,54.8 27.3658537,54.8 C12.2776098,54.8 0,42.5984 0,27.6 C0,12.6016 12.2776098,0.4 27.3658537,0.4 C41.7506341,0.4 53.5501463,11.4928 54.6286829,25.5168 L56.9499512,23.2064 C58.8365854,21.3312 61.895122,21.3312 63.7785366,23.2064 C65.6651707,25.0784 65.6651707,28.1184 63.7817561,29.9936 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

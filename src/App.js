@@ -17,8 +17,12 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Search />
-        <SimpleSlider />
+
+          <div className="main-container">
+              <Search />
+              <SimpleSlider />
+          </div>
+
         <div className="main-container">
           <div className="main-row clear">
               <div className="main-content">

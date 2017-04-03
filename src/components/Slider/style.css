@@ -1,7 +1,4 @@
 .slider__main {
-  margin: 30px 34px 0 0 ;
-  width: 46%;
-  float: right;
   height: 220px;
 }
 
@@ -10,10 +7,8 @@
 }
 
 .slider__main .slick-slide img {
-  /*max-height: 250px;*/
   height: 220px;
   opacity: 0.7;
-  border-radius: 5px;
 }
 
 .slick-slide {
