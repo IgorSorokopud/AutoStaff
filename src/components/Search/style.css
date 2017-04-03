@@ -2,9 +2,7 @@
   background: #faf9f7;
   border: 1px solid #dfe1d9;
   box-sizing: border-box;
-  position: absolute;
   padding: 20px;
-  width: 40%;
   height: 220px;
   z-index: 1;
 }

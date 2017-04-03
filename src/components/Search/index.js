@@ -1,54 +1,54 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import './style.css';
 
 class Search extends Component {
 
-  render() {
-    return (
-      <div className="search">
-        <div className="search__radio">
-          <form name="search" method="post" action="">
-            <input type="radio" id="search__customer" className="search__type-user" name="search" value="customer"/>
-            <label for="search__customer" className="search__type-user-lable">Заказы</label>
-            <input type="radio" id="search__executor" className="search__type-user" name="search" value="executor"/>
-            <label for="search__executor" className="search__type-user-lable">Исполнители</label>
-          </form>
-        </div>
+    render() {
+        return (
+            <div className="form form--main">
+                <form name="search" method="post" action="">
 
-        <div className="search__select">
-          <div>
-            <label for="search__region">Регион</label>
-            <select className="search__region" id="search__region">
-              <option>Киев</option>
-              <option>Львов</option>
-              <option>Черкасы</option>
-              <option>Ровно</option>
-              <option>Чернигов</option>
-              <option>Винница</option>
-            </select>
-          </div>
+                    <div className="form__select">
+                        <select id="search__region">
+                            <option selected="selected">Я ищу</option>
+                            <option>Закачиков</option>
+                            <option>Исполнителей</option>
+                        </select>
+                    </div>
 
-          <div>
-            <label for="search__type-work">Вид работ</label>
-            <select className="search__type-work" id="search__type-work">
-              <option>Ходовая</option>
-              <option>Мотор</option>
-              <option>Кузовные работы</option>
-              <option>Электрика</option>
-              <option>Покраска</option>
-              <option>Сварка</option>
-            </select>
-          </div>
-        </div>
+                    <div className="form__select">
+                        <select id="search__region">
+                            <option selected="selected">Регион</option>
+                            <option>Киев</option>
+                            <option>Львов</option>
+                            <option>Черкасы</option>
+                            <option>Ровно</option>
+                            <option>Чернигов</option>
+                            <option>Винница</option>
+                        </select>
+                    </div>
 
-        <a href="#" className="btn btn-them-border">Найти</a>
-      </div>
-    );
-  }
+                    <div className="form__select">
+                        <select id="search__type-work">
+                            <option selected="selected">Вид работ</option>
+                            <option>Ходовая</option>
+                            <option>Мотор</option>
+                            <option>Кузовные работы</option>
+                            <option>Электрика</option>
+                            <option>Покраска</option>
+                            <option>Сварка</option>
+                        </select>
+                    </div>
+
+                    <button className="btn btn--action btn--large" type="submit">Найти</button>
+                </form>
+            </div>
+        );
+    }
 }
 
 export default connect(
-  state => ({}),
-  dispatch => ({})
+    state => ({}),
+    dispatch => ({})
 )(Search);

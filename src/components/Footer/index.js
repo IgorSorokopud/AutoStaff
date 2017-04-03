@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import logo from '../../images/main_logo.png';
+import logo from '../../images/avtostaff.svg';
 
 class Footer extends Component {
 
