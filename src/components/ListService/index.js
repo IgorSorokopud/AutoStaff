@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.css';
+import {showModal} from '../../actions/modal';
 import defaultAvatar from '../../images/ocean.jpg';
 import Rating from '../../components/Rating/index';
 import { Link } from 'react-router';
 
 class ListService extends Component {
   render() {
+
+    function login(data) {
+        this.props.modal({mode: data, isShowingModal: true});
+    };
+
     return (
       <div>
         <div className="service">
@@ -38,7 +44,10 @@ class ListService extends Component {
                         <a href="#">Отзывы: { user.comment } </a>
                     </div>
                     <div className="card__buttons">
-                        <Link to={`/order`}className="btn btn--link">Заказать услугу</Link>
+                        {!this.props.users.registered ?
+                        <a href="#" onClick={login.bind(this, 'Registration')} className="btn btn--link">Заказать услугу</a>
+                        : <Link to={`/order/`} className="btn btn--link">Заказать услугу</Link>
+                        }
                         <Link to={`/more/${user.id}`} className="btn btn--link">Подробнее</Link>
                     </div>
                 </div>
@@ -56,5 +65,9 @@ export default connect(
   state => ({
     users: state.startData
   }),
-  dispatch => ({})
+  dispatch => ({
+    modal: (data) => {
+        dispatch(showModal(data));
+    }
+  })
 )(ListService);

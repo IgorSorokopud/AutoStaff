@@ -89,16 +89,6 @@ class Order extends Component {
 
                             </form>
                         </div>
-                        <div className="main-sidebar">
-                            <div className="card">
-                                <div className="card__content">
-                                    <div className="card__title">Андрей Матвийчук</div>
-                                    <div className="card__subtitle">Специализация: Механик</div>
-                                    <div className="card__adress">г.Житомир ул.Бугайченко 23 тел.096 567 3275 Михаил
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
