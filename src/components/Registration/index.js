@@ -93,7 +93,7 @@ class Registration extends Component {
           <input className="modal__input" onChange={this.handleLogin} type="text" name="phone" placeholder="Номер телефона"/>
           <input id="modal__rules" type="checkbox"/>
           <lable for="modal__rules">С правилами согласен</lable>
-          <input className="btn btn-them-border" type="submit" value="Зарегестрироваться"/>
+          <input className="btn btn--ghost btn--large" type="submit" value="Зарегестрироваться"/>
         </form>
       </div>
     );
