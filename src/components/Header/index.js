@@ -50,7 +50,7 @@ class Header extends Component {
                                     <img src={defaultAvatar}/>
                                 </div>
                                 <Link to={`/cabinet`} className="">Мой кабинет</Link>
-                                <a href="#" className="btn btn--primary">Подать заявку</a>
+                                <Link to={`/order`} className="btn btn--primary">Подать заявку</Link>
                                 <a href="#" onClick={clearStorage} className="btn btn--primary">Выйти</a>
                             </div> :
                             <div className="header__buttons">
