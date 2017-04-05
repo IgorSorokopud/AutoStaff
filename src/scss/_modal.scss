@@ -1,6 +1,10 @@
 .modal {
   text-align: center;
 
+  &__wrapper {
+    border-radius: 0 !important;
+  }
+
   &__title {
     text-align: center;
   }
