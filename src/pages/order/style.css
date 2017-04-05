@@ -24,3 +24,7 @@
   border-radius: 3px;
   min-height: 100px;
 }
+
+.form__select-disables::before {
+  display: none;
+}

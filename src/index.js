@@ -13,6 +13,7 @@ import reducer from './reducers';
 import More from './pages/more/More';
 import Manual from './pages/manual/Manual';
 import Order from './pages/order/Order';
+import Cabinet from './pages/cabinet/Cabinet';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
@@ -26,6 +27,7 @@ ReactDOM.render(
       <Route path="/more/:id" component={More} />
       <Route path="/manual" component={Manual} />
       <Route path="/order" component={Order} />
+      <Route path="/cabinet" component={Cabinet} />
     </Router>
   </Provider>,
   document.getElementById('root')

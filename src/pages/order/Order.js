@@ -22,8 +22,8 @@ class Order extends Component {
                                     <div className="form__col-50">
 
                                         <label for="order__brand" className="">Марка</label>
-                                        <div className="form__select">
-                                            <select id="order__brand">
+                                        <div className="form__select form__select-disables">
+                                            <select id="order__brand" disabled>
                                                 <option selected>Марка</option>
                                                 <option>BMW</option>
                                                 <option>KIA</option>
@@ -32,8 +32,8 @@ class Order extends Component {
                                         </div>
 
                                         <label for="order__model" className="">Модель</label>
-                                        <div className="form__select">
-                                            <select id="order__model">
+                                        <div className="form__select form__select-disables">
+                                            <select id="order__model" disabled>
                                                 <option selected>Модель</option>
                                                 <option>e320</option>
                                                 <option>e310</option>
@@ -42,8 +42,8 @@ class Order extends Component {
                                         </div>
 
                                         <label for="order__year" className="">Год</label>
-                                        <div className="form__select">
-                                            <select id="order__year">
+                                        <div className="form__select form__select-disables">
+                                            <select id="order__year" disabled>
                                                 <option selected>Год</option>
                                                 <option>2017</option>
                                                 <option>2016</option>
@@ -52,7 +52,7 @@ class Order extends Component {
                                         </div>
 
                                         <label for="order__vin" className="">Vin-код</label>
-                                        <input type="text" name="vin"/>
+                                        <input type="text" name="vin" disabled/>
 
                                     </div>
 
