@@ -27,7 +27,7 @@ class Modal extends React.Component {
       {
         this.props.stateModal.isShowingModal &&
         <ModalContainer onClose={this.handleClose}>
-          <ModalDialog onClose={this.handleClose}>
+          <ModalDialog className="modal__wrapper" onClose={this.handleClose}>
             {this.switchMode(this.props.stateModal.mode)}
           </ModalDialog>
         </ModalContainer>

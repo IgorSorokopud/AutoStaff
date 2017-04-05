@@ -23,6 +23,7 @@
   }
 
   &--ghost {
+    background: transparent;
     border: 1px solid $colorSecondary;
     color: $colorSecondary;
   }

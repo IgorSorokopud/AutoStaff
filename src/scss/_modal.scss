@@ -1,6 +1,10 @@
 .modal {
   text-align: center;
 
+  &__wrapper {
+    border-radius: 0 !important;
+  }
+
   &__title {
     text-align: center;
   }
@@ -11,25 +15,18 @@
   }
 
   &__input {
-    display: inline-block;
-    width: 100%;
-    margin-top: 20px;
-    outline: 0 none;
+    //background: $colorDefaultInverted;
     border: 1px solid #d9d9d9;
-    font: 15px/18px Arial, sans-serif;
-    padding: 11px 10px;
-    background-color: #fff;
     border-radius: 3px;
-    -webkit-box-shadow: 0 1px 2px #f2f2f2 inset;
-    -moz-box-shadow: 0 1px 2px #f2f2f2 inset;
     box-shadow: 0 1px 2px #f2f2f2 inset;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-transition: border-color 0.2s ease;
-    -moz-transition: border-color 0.2s ease;
-    -o-transition: border-color 0.2s ease;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 11px 10px;
+    width: 100%;
+    font: 15px/18px Arial, sans-serif;
     transition: border-color 0.2s ease;
+    outline: 0 none;
   }
 
   .btn-them-border {
