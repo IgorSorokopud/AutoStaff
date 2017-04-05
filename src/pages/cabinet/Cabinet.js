@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/index';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import defaultAvatar from '../../images/default_avatar.png';
+import Rating from '../../components/Rating/index';
 import './style.css'
 class Cabinet extends Component {
 
@@ -131,6 +132,36 @@ class Cabinet extends Component {
             </div>
         </div>
 
+        <div className="main-container">
+            <div className="main-row">
+                <div className="main-content">
+                    <div className="cabinet__my-orders-wr">
+                        <div className="card__title">Мои заказы</div>
+
+                        <div className="card">
+                          <div className="card__left">
+                              <div className="card__thumb best__img">
+                                  <img className="card__thumb-img" src={defaultAvatar}/>
+                              </div>
+                          </div>
+                          <div className="card__right">
+                              <div className="card__content">
+                                  <Link to={`/more/`} className="card__title">Антон</Link>
+                                  <div className="card__subtitle">Специализация: Механик</div>
+                                  <div className="card__adress">г.Киев</div>
+
+                                  <div className="card__corner card__corner--top">
+                                  <Rating />
+                                  <div>статус: активный</div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <Footer />
       </div>
     );
@@ -139,7 +170,7 @@ class Cabinet extends Component {
 
 export default connect(
   state => ({
-      state: state
+    state: state
   }),
   dispatch => ({})
 )(Cabinet);
