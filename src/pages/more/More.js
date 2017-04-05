@@ -33,9 +33,6 @@ class More extends Component {
                                     <div className="card__corner card__corner--top">
                                         <Rating />
                                     </div>
-                                    <div className="card__corner card__corner card__corner--bottom">
-                                        <a href="#">Отзывы: { userMore.comment } </a>
-                                    </div>
                                     <div className="card__buttons">
                                         <Link to={`/order`}className="btn btn--link">Заказать услугу</Link>
                                         <Link to="/" className="btn btn--link">Назад</Link>
