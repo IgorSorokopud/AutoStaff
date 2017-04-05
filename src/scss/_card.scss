@@ -4,7 +4,7 @@
   border-radius: 3px;
   box-sizing: border-box;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   @include clearfix;
 
   &__left {
@@ -43,6 +43,7 @@
 
   &__content {
     padding: 20px 40px;
+    @include clearfix;
   }
 
   // content
