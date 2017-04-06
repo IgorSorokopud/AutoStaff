@@ -34,10 +34,18 @@
 
 .main-home-left {
   float: left;
-  width: 30%;
+  width: 100%;
+
+  @include media(M) {
+    width: 30%;
+  }
 }
 
 .main-home-right {
   float: left;
-  width: 70%;
+  width: 100%;
+
+  @include media(M) {
+    width: 70%;
+  }
 }
