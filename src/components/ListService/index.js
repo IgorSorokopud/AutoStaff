@@ -15,7 +15,7 @@ class ListService extends Component {
           <div className="card" key={index}>
             <div className="card__left">
                 <div className="card__thumb">
-                    <img className="card__thumb-img" src={user.photo} key={index}/>
+                    <img className="card__thumb-img" src={'images/mechanics/' + user.photo} key={index}/>
                 </div>
             </div>
             <div className="card__right">

@@ -38,7 +38,7 @@
   "users": [
     {
       "id": 0,
-      "photo": "/static/media/matviy.2f8549f8.jpeg",
+      "photo": "m1.jpg",
       "name": "Андрей",
       "surname": "Матвийчук",
       "specialization": "Механик",
@@ -72,7 +72,7 @@
     },
     {
       "id": 1,
-      "photo": "/static/media/ocean.fc38bb49.jpg",
+      "photo": "m2.jpg",
       "name": "Океан Авто",
       "specialization": "СТО",
       "surname": "",
