@@ -1,8 +1,6 @@
-/**/
-
 .small__userpic {
-  /*float: left;*/
+  border: 1px solid #efefef;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  vertical-align: middle;
 }

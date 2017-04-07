@@ -46,10 +46,8 @@ class Header extends Component {
                         {this.props.state.startData.registered ?
                             <div className="header__buttons">
                                 {this.props.state.startData.autorisation.name}
-                                <div className="small__userpic">
-                                    <img src={defaultAvatar}/>
-                                </div>
-                                <Link to={`/cabinet`} className="">Мой кабинет</Link>
+                                <img className="small__userpic" src={defaultAvatar}/>
+                                <Link to={`/cabinet`} className="btn btn--ghost">Мой кабинет</Link>
                                 <Link to={`/order`} className="btn btn--primary">Подать заявку</Link>
                                 <a href="#" onClick={clearStorage} className="btn btn--primary">Выйти</a>
                             </div> :
