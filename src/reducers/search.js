@@ -1,7 +1,7 @@
 const initialState = '';
 
-export default function searchBlog (state = initialState, action) {
-  if(action.type === 'SEARCH_BLOG') {
+export default function searchItem (state = initialState, action) {
+  if(action.type === 'SEARCH') {
     return action.payload;
   }
   return state;

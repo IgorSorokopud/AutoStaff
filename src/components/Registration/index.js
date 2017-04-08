@@ -4,62 +4,64 @@ import Social from '../Social/index';
 
 class Registration extends Component {
 
-  state = {
-    name:'',
-    surname:'',
-    email:'',
-    phone:''
-  };
+    state = {
+        name: '',
+        surname: '',
+        email: '',
+        phone: ''
+    };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    let key,
-        autorisation = {},
-        hasError;
+    handleSubmit = (e) => {
+        e.preventDefault();
+        let key,
+            autorisation = {},
+            hasError;
 
-    for (key in this.state) {
-      if (!this.state[key]) {
-        styleValidation(key, 'red', 'invalid');
-        hasError = true;
-      } else {
-        styleValidation(key, 'green', 'invalid');
+        for (key in this.state) {
+            if (!this.state[key]) {
+                styleValidation(key, 'red', 'invalid');
+                hasError = true;
+            } else {
+                styleValidation(key, 'green', 'invalid');
 
-        autorisation[key] = this.state[key];
-        autorisation.registered = true;
-      }
-    }
+                autorisation[key] = this.state[key];
+                autorisation.registered = true;
+            }
+        }
 
-    if(!hasError) {
-      this.setStorage(autorisation);
-      window.location.reload();
-    }
+        if (!hasError) {
+            this.setStorage(autorisation);
+            window.location.reload();
+        }
 
-    function styleValidation (name, color, text) {
-      let node = document.getElementsByName(name)[0];
-      node.style.border = '1px solid ' + color;
-    }
-  }
+        function styleValidation(name, color, text) {
+            let node = document.getElementsByName(name)[0];
+            node.style.border = '1px solid ' + color;
+        }
+    };
 
-  setStorage = (autorisation) => {
-    localStorage.setItem('autorisation', JSON.stringify(autorisation));
-  }
+    setStorage = (autorisation) => {
+        localStorage.setItem('autorisation', JSON.stringify(autorisation));
+    };
 
-  handleLogin = (event) => {
-    this.setState({[event.target.name]: event.target.value});
-  }
+    handleLogin = (event) => {
+        this.setState({[event.target.name]: event.target.value});
+    };
 
-  render() {
+    render() {
 
-    return (
-      <div className="modal">
-          <h3 className="modal__title">Регистрация</h3>
+        return (
+            <div className="modal">
+                <h3 className="modal__title">Регистрация</h3>
                 <Social />
 
                 <form className="modal__form" onSubmit={this.handleSubmit}>
-                    <input type="radio" onChange={this.handleLogin} id="registration__executor" className="registration__type-user" name="type" value="executor"/>
+                    <input type="radio" onChange={this.handleLogin} id="registration__executor"
+                           className="registration__type-user" name="type" value="executor"/>
                     <label for="registration__executor" className="registration__type-user-lable">Исполнитель</label>
 
-                    <input type="radio" onChange={this.handleLogin} id="registration__performer" className="registration__type-user" name="type" value="performer"/>
+                    <input type="radio" onChange={this.handleLogin} id="registration__performer"
+                           className="registration__type-user" name="type" value="customer"/>
                     <label for="registration__performer" className="performer__type-user-lable">Заказчик</label>
 
                     <input className="modal__input" onChange={this.handleLogin} type="text" name="name"
@@ -82,6 +84,6 @@ class Registration extends Component {
 }
 
 export default connect(
-  state => ({}),
-  dispatch => ({})
+    state => ({}),
+    dispatch => ({})
 )(Registration);

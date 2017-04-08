@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Best from '../../components/Best/index';
 
 class Social extends Component {
 

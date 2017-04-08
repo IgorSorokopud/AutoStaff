@@ -23,7 +23,8 @@ class More extends Component {
                                 <div className="card__content">
                                     <div className="card__title">{user.name} {user.surname}</div>
                                     <div className="card__subtitle">Специализация: {user.specialization}</div>
-                                    <div className="card__adress">{user.addres.city}, {user.addres.street}, {user.addres.number}</div>
+                                    <div
+                                        className="card__adress">{user.addres.city}, {user.addres.street}, {user.addres.number}</div>
                                     <div className="card__description">{user.description}</div>
                                     <ul className="card__list">
                                         {user.options.map(function (list, index) {
@@ -34,7 +35,7 @@ class More extends Component {
                                         <Rating />
                                     </div>
                                     <div className="card__buttons">
-                                        <Link to={`/order`}className="btn btn--link">Заказать услугу</Link>
+                                        <Link to={`/order`} className="btn btn--link">Заказать услугу</Link>
                                         <Link to="/" className="btn btn--link">Назад</Link>
                                     </div>
                                 </div>
@@ -52,11 +53,17 @@ class More extends Component {
                             <div className="card">
                                 <div className="card__content">
                                     <img src={user.photo}/>
+
+                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,
+                                        New+York,NY&zoom=13&size=600x300&maptype=roadmap
+                                        &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.
+                                        711614,-74.012318
+                                        &markers=color:red%7Clabel:C%7C40.718217,-73.998284
+                                        &key=AIzaSyBARKCGndqyoBaMuM7UBnSplfFzZJINgGc"/>
                                 </div>
                             </div>
                             <Sidebar />
                         </div>
-
                     </div>
                 </div>
 

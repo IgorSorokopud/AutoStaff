@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import logo from '../../images/avtostaff.svg';
+import logo from '../../images/avtostaff.png';
 import Social from '../Social/index';
 
 class Footer extends Component {
@@ -53,8 +53,9 @@ class Footer extends Component {
                     </div>
 
                     <div className="footer__github">
-                        <a href="https://github.com/IgorSorokopud" target="_blank"><i className="fa fa-github"
-                                                                                      aria-hidden="true"></i></a>
+                        <a href="https://github.com/IgorSorokopud" target="_blank">
+                            <i className="fa fa-github" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
             </div>

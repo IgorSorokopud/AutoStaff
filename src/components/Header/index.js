@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {showModal} from '../../actions/modal';
-import logo from '../../images/avtostaff.svg';
+import logo from '../../images/avtostaff.png';
 import defaultAvatar from '../../images/default_avatar.png';
 import {Link} from 'react-router';
 import './style.css';
@@ -12,12 +12,12 @@ class Header extends Component {
 
         function login(data) {
             this.props.modal({mode: data, isShowingModal: true});
-        };
+        }
 
         function clearStorage() {
             localStorage.clear();
             window.location.reload();
-        };
+        }
 
         return (
             <div>

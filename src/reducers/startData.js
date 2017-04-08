@@ -8,7 +8,7 @@ const initialState = {
     }
   ],
   "services": []
-}
+};
 
 export default function startData (state = initialState, action) {
   if(action.type === 'ADD_START_DATA') {

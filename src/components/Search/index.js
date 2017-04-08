@@ -1,18 +1,23 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {searchItem} from '../../actions/search';
 
 class Search extends Component {
+
+    handleLogin = (event) => {
+        this.props.search(event.target.value);
+    };
 
     render() {
         return (
             <div className="form form--main">
-                <form name="search" method="post" action="">
+                <form name="search" method="post" action="" onSubmit={this.handleSubmit}>
 
                     <div className="form__select">
-                        <select id="search__region">
-                            <option selected="selected">Я ищу</option>
-                            <option>Закачиков</option>
-                            <option>Исполнителей</option>
+                        <select id="search__region" name="typeSearch" onChange={this.handleLogin}>
+                            <option value="" selected="selected">Я ищу</option>
+                            <option value="customer">Закачиков</option>
+                            <option value="executor">Исполнителей</option>
                         </select>
                     </div>
 
@@ -49,5 +54,9 @@ class Search extends Component {
 
 export default connect(
     state => ({}),
-    dispatch => ({})
+    dispatch => ({
+        search: (data) => {
+            dispatch(searchItem(data));
+        }
+    })
 )(Search);

@@ -94,6 +94,9 @@ class CabinetExecutor extends Component {
                                         <option>Сварка</option>
                                     </select>
                                 </div>
+
+                                <label>Опишите свой опыт</label>
+                                <textarea placeholder="Введите текст"></textarea>
                             </div>
                         </div>
 

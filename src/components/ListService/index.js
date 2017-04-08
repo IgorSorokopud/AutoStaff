@@ -7,67 +7,86 @@ import Rating from '../../components/Rating/index';
 import { Link } from 'react-router';
 
 class ListService extends Component {
-  render() {
+    render() {
+        console.log('state11', this.props.state.search);
 
-    function login(data) {
-        this.props.modal({mode: data, isShowingModal: true});
-    };
+        function login(data) {
+            this.props.modal({mode: data, isShowingModal: true});
+        }
 
-    return (
-      <div>
-        <div className="service">
-        {this.props.users.users.map(function(user, index){
-        return(
-          <div className="card" key={index}>
-            <div className="card__left">
-                <div className="card__thumb">
-                    <img className="card__thumb-img" src={user.photo} key={index}/>
-                </div>
-            </div>
-            <div className="card__right">
-                <div className="card__content">
-                    <Link to={`/more/${user.id}`} className="card__title">{user.name} {user.surname}</Link>
-                    <div className="card__subtitle">Специализация: {user.specialization}</div>
-                    <div className="card__adress">{user.addres.city}</div>
-                    <div className="card__excerpt">{user.description}</div>
-                    <ul className="card__list">
-                        {user.options.map(function(list, index){
-                            if(index < 7) {
-                                return(<li className="card__list-item" key={index}>{list}</li>)
-                            }
-                        })}
-                    </ul>
-                    <div className="card__corner card__corner--top">
-                        <Rating />
-                    </div>
-                    <div className="card__corner card__corner--bottom">
-                        <a href="#">Отзывы: { user.comment } </a>
-                    </div>
-                    <div className="card__buttons">
-                        {!this.props.users.registered ?
-                        <a href="#" onClick={login.bind(this, 'Registration')} className="btn btn--link">Заказать услугу</a>
-                        : <Link to={`/order/`} className="btn btn--link">Заказать услугу</Link>
+        return (
+            <div>
+                <div className="service">
+                    { this.props.users.users.map(function (user, index) {
+
+                        let item = (
+                            <div className="card" key={index}>
+                                <div className="card__left">
+                                    <div className="card__thumb">
+                                        <img className="card__thumb-img" src={user.photo} key={index}/>
+                                    </div>
+                                </div>
+                                <div className="card__right">
+                                    <div className="card__content">
+                                        <Link to={`/more/${user.id}`}
+                                              className="card__title">{user.name} {user.surname}</Link>
+                                        <div className="card__subtitle">Специализация: {user.specialization}</div>
+                                        <div className="card__adress">{user.addres.city}</div>
+                                        <div className="card__excerpt">{user.description}</div>
+                                        <ul className="card__list">
+                                            {user.options.map(function (list, index) {
+                                                if (index < 7) {
+                                                    return (<li className="card__list-item" key={index}>{list}</li>)
+                                                }
+                                            })}
+                                        </ul>
+                                        <div className="card__corner card__corner--top">
+                                            <Rating />
+                                        </div>
+                                        <div className="card__corner card__corner--bottom">
+                                            <a href="#">Отзывы: { user.comment } </a>
+                                        </div>
+
+                                        <div className="card__buttons">
+                                            {!this.props.users.registered ?
+                                                <a href="#" onClick={login.bind(this, 'Registration')}
+                                                   className="btn btn--link">Заказать услугу</a>
+                                                :
+                                                user.type === "executor" ?
+                                                    <Link to={`/order/`} className="btn btn--link">Заказать
+                                                        услугу</Link>
+                                                    :
+                                                    <Link to={`/order/`} className="btn btn--link">Выполнить
+                                                        заказ</Link>
+                                            }
+                                            <Link to={`/more/${user.id}`} className="btn btn--link">Подробнее</Link>
+                                            <Link to={`/more/${user.id}`} className="btn btn--link">Задать вопрос</Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+
+                        if (this.props.state.search === user.type && this.props.state.search !== 'all') {
+                            return item;
+                        } else if (this.props.state.search === '') {
+                            return item;
                         }
-                        <Link to={`/more/${user.id}`} className="btn btn--link">Подробнее</Link>
-                    </div>
+                    }.bind(this))}
                 </div>
             </div>
-          </div>
-         )
-        }.bind(this))}
-        </div>
-      </div>
-    );
-  }
+        );
+    }
 }
 
 export default connect(
-  state => ({
-    users: state.startData
-  }),
-  dispatch => ({
-    modal: (data) => {
-        dispatch(showModal(data));
-    }
-  })
+    state => ({
+        users: state.startData,
+        state: state
+    }),
+    dispatch => ({
+        modal: (data) => {
+            dispatch(showModal(data));
+        }
+    })
 )(ListService);
