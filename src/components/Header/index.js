@@ -49,7 +49,11 @@ class Header extends Component {
                                 <div className="small__userpic">
                                     <img src={defaultAvatar}/>
                                 </div>
-                                <Link to={`/cabinet`} className="">Мой кабинет</Link>
+                                {this.props.state.startData.autorisation.type === 'executor' ?
+                                    <Link to={`/cabinetExecutor`} className="">Мой кабинет</Link>
+                                    :
+                                    <Link to={`/cabinet`} className="">Мой кабинет</Link>
+                                }
                                 <Link to={`/order`} className="btn btn--primary">Подать заявку</Link>
                                 <a href="#" onClick={clearStorage} className="btn btn--primary">Выйти</a>
                             </div> :

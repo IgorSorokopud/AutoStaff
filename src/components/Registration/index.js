@@ -53,12 +53,6 @@ class Registration extends Component {
       <div className="modal">
           <h3 className="modal__title">Регистрация</h3>
 
-          <input type="radio" id="registration__executor" className="registration__type-user" name="executor" value="executor"/>
-          <label for="registration__executor" className="registration__type-user-lable">Исполнитель</label>
-
-          <input type="radio" id="registration__performer" className="registration__type-user" name="executor" value="executor"/>
-          <label for="registration__performer" className="performer__type-user-lable">Заказчик</label>
-
         <ul className="social__list">
           <li className="social__item">
           <a href="#">
@@ -87,15 +81,22 @@ class Registration extends Component {
           </li>
         </ul>
         <form className="modal__form" onSubmit={this.handleSubmit}>
-          <input className="modal__input" onChange={this.handleLogin} type="text" name="name" placeholder="Имя"/>
-          <input className="modal__input" onChange={this.handleLogin} type="text" name="surname" placeholder="Фамилия"/>
-          <input className="modal__input" onChange={this.handleLogin} type="text" name="email" placeholder="Электронная почта"/>
-          <input className="modal__input" onChange={this.handleLogin} type="text" name="phone" placeholder="Номер телефона"/>
-          <div className="modal__checkbox">
-            <input id="modal__rules" type="checkbox"/>
-            <lable for="modal__rules">С правилами согласен</lable>
-          </div>
-          <input className="btn btn--ghost btn--large" type="submit" value="Зарегестрироваться"/>
+
+            <input type="radio" onChange={this.handleLogin} id="registration__executor" className="registration__type-user" name="type" value="executor"/>
+            <label for="registration__executor" className="registration__type-user-lable">Исполнитель</label>
+
+            <input type="radio" onChange={this.handleLogin} id="registration__performer" className="registration__type-user" name="type" value="performer"/>
+            <label for="registration__performer" className="performer__type-user-lable">Заказчик</label>
+
+            <input className="modal__input" onChange={this.handleLogin} type="text" name="name" placeholder="Имя"/>
+            <input className="modal__input" onChange={this.handleLogin} type="text" name="surname" placeholder="Фамилия"/>
+            <input className="modal__input" onChange={this.handleLogin} type="text" name="email" placeholder="Электронная почта"/>
+            <input className="modal__input" onChange={this.handleLogin} type="text" name="phone" placeholder="Номер телефона"/>
+            <div className="modal__checkbox">
+                <input id="modal__rules" type="checkbox"/>
+                <lable for="modal__rules">С правилами согласен</lable>
+            </div>
+            <input className="btn btn--ghost btn--large" type="submit" value="Зарегестрироваться"/>
         </form>
       </div>
     );

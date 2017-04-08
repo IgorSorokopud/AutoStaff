@@ -16,9 +16,7 @@ class App extends Component {
         this.props.start();
         return (
             <div>
-
                 <Header />
-
                 <div className="main-container">
                     <div className="main-home-left">
                         <Search />
