@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Social from '../Social/index';
 
 class Login extends Component {
 
@@ -49,33 +50,7 @@ class Login extends Component {
     return (
       <div className="modal">
         <h3 className="modal__title">Войти</h3>
-        <ul className="social__list">
-          <li className="social__item">
-          <a href="#">
-            <i className="social__icon fa fa-facebook" aria-hidden="true"></i>
-          </a>
-          </li>
-          <li className="social__item">
-          <a href="#">
-            <i className="social__icon fa fa-google-plus" aria-hidden="true"></i>
-          </a>
-          </li>
-          <li className="social__item">
-          <a href="#">
-            <i className="social__icon fa fa-odnoklassniki" aria-hidden="true"></i>
-          </a>
-          </li>
-          <li className="social__item">
-          <a href="#">
-            <i className="social__icon fa fa-twitter" aria-hidden="true"></i>
-          </a>
-          </li>
-          <li className="social__item">
-          <a href="#">
-            <i className="social__icon fa fa-vk" aria-hidden="true"></i>
-          </a>
-          </li>
-        </ul>
+        <Social />
         <form className="modal__form" onSubmit={this.handleSubmit}>
           <input className="modal__input" onChange={this.handleLogin} type="text" name="name" placeholder="Логин"/>
           <input className="modal__input" onChange={this.handleLogin} type="password" name="password" placeholder="Пароль"/>

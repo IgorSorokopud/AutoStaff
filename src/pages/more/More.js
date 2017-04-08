@@ -10,7 +10,7 @@ import './style.css';
 class More extends Component {
     render() {
         let currentMore = this.props.ownProps.params.id;
-        let userMore = this.props.users.users[currentMore];
+        let user = this.props.users.users[currentMore];
         return (
             <div>
                 <Header />
@@ -21,12 +21,12 @@ class More extends Component {
 
                             <div className="card">
                                 <div className="card__content">
-                                    <div className="card__title">{userMore.name} {userMore.surname}</div>
-                                    <div className="card__subtitle">Специализация: {userMore.specialization}</div>
-                                    <div className="card__adress">{userMore.addres}</div>
-                                    <div className="card__description">{userMore.description}</div>
+                                    <div className="card__title">{user.name} {user.surname}</div>
+                                    <div className="card__subtitle">Специализация: {user.specialization}</div>
+                                    <div className="card__adress">{user.addres.city}, {user.addres.street}, {user.addres.number}</div>
+                                    <div className="card__description">{user.description}</div>
                                     <ul className="card__list">
-                                        {userMore.options.map(function (list, index) {
+                                        {user.options.map(function (list, index) {
                                             return (<li className="card__list-item" key={index}>{list}</li>)
                                         })}
                                     </ul>
@@ -51,7 +51,7 @@ class More extends Component {
                         <div className="main-sidebar">
                             <div className="card">
                                 <div className="card__content">
-                                    <img src={userMore.photo}/>
+                                    <img src={user.photo}/>
                                 </div>
                             </div>
                             <Sidebar />

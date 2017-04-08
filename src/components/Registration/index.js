@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Social from '../Social/index';
 
 class Registration extends Component {
 
@@ -52,55 +53,32 @@ class Registration extends Component {
     return (
       <div className="modal">
           <h3 className="modal__title">Регистрация</h3>
+                <Social />
 
-        <ul className="social__list">
-          <li className="social__item">
-          <a href="#">
-            <i className="social__icon fa fa-facebook" aria-hidden="true"></i>
-          </a>
-          </li>
-          <li className="social__item">
-          <a href="#">
-            <i className="social__icon fa fa-google-plus" aria-hidden="true"></i>
-          </a>
-          </li>
-          <li className="social__item">
-          <a href="#">
-            <i className="social__icon fa fa-odnoklassniki" aria-hidden="true"></i>
-          </a>
-          </li>
-          <li className="social__item">
-          <a href="#">
-            <i className="social__icon fa fa-twitter" aria-hidden="true"></i>
-          </a>
-          </li>
-          <li className="social__item">
-          <a href="#">
-            <i className="social__icon fa fa-vk" aria-hidden="true"></i>
-          </a>
-          </li>
-        </ul>
-        <form className="modal__form" onSubmit={this.handleSubmit}>
+                <form className="modal__form" onSubmit={this.handleSubmit}>
+                    <input type="radio" onChange={this.handleLogin} id="registration__executor" className="registration__type-user" name="type" value="executor"/>
+                    <label for="registration__executor" className="registration__type-user-lable">Исполнитель</label>
 
-            <input type="radio" onChange={this.handleLogin} id="registration__executor" className="registration__type-user" name="type" value="executor"/>
-            <label for="registration__executor" className="registration__type-user-lable">Исполнитель</label>
+                    <input type="radio" onChange={this.handleLogin} id="registration__performer" className="registration__type-user" name="type" value="performer"/>
+                    <label for="registration__performer" className="performer__type-user-lable">Заказчик</label>
 
-            <input type="radio" onChange={this.handleLogin} id="registration__performer" className="registration__type-user" name="type" value="performer"/>
-            <label for="registration__performer" className="performer__type-user-lable">Заказчик</label>
-
-            <input className="modal__input" onChange={this.handleLogin} type="text" name="name" placeholder="Имя"/>
-            <input className="modal__input" onChange={this.handleLogin} type="text" name="surname" placeholder="Фамилия"/>
-            <input className="modal__input" onChange={this.handleLogin} type="text" name="email" placeholder="Электронная почта"/>
-            <input className="modal__input" onChange={this.handleLogin} type="text" name="phone" placeholder="Номер телефона"/>
-            <div className="modal__checkbox">
-                <input id="modal__rules" type="checkbox"/>
-                <lable for="modal__rules">С правилами согласен</lable>
+                    <input className="modal__input" onChange={this.handleLogin} type="text" name="name"
+                           placeholder="Имя"/>
+                    <input className="modal__input" onChange={this.handleLogin} type="text" name="surname"
+                           placeholder="Фамилия"/>
+                    <input className="modal__input" onChange={this.handleLogin} type="text" name="email"
+                           placeholder="Электронная почта"/>
+                    <input className="modal__input" onChange={this.handleLogin} type="text" name="phone"
+                           placeholder="Номер телефона"/>
+                    <div className="modal__checkbox">
+                        <input id="modal__rules" type="checkbox"/>
+                        <lable for="modal__rules">С правилами согласен</lable>
+                    </div>
+                    <input className="btn btn--ghost btn--large" type="submit" value="Зарегестрироваться"/>
+                </form>
             </div>
-            <input className="btn btn--ghost btn--large" type="submit" value="Зарегестрироваться"/>
-        </form>
-      </div>
-    );
-  }
+        );
+    }
 }
 
 export default connect(
