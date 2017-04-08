@@ -14,7 +14,7 @@ class Order extends Component {
                 <div className="main-container">
                     <div className="main-row">
                         <div className="main-content">
-                            <form className="form" name="order" method="post" action="">
+                            <form className="form form--main" name="order" method="post" action="">
 
                                 <h3>Заказ услуги</h3>
 
