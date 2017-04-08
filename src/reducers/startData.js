@@ -5,12 +5,6 @@ const initialState = {
       "name": "Имя",
       "surname": "Фамилия",
       "options": []
-    },
-    {
-      "photo": "/images",
-      "name": "Океанtest",
-      "surname": "Автоtest",
-      "options": []
     }
   ],
   "services": []
