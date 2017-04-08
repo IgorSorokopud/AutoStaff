@@ -3,7 +3,12 @@
 
   &__wrapper {
     border-radius: 0 !important;
-    padding: 60px !important;
+    padding: 0 !important;
+    min-width: 300px;
+
+    @include media(M) {
+      min-width: 400px;
+    }
   }
 
   &__title {
