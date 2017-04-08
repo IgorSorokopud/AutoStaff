@@ -22,7 +22,7 @@ class ListService extends Component {
                 <div className="card__content">
                     <Link to={`/more/${user.id}`} className="card__title">{user.name} {user.surname}</Link>
                     <div className="card__subtitle">Специализация: {user.specialization}</div>
-                    <div className="card__adress">{user.addres}</div>
+                    <div className="card__adress">{user.addres.city}</div>
                     <div className="card__excerpt">{user.description}</div>
                     <ul className="card__list">
                         {user.options.map(function(list, index){
