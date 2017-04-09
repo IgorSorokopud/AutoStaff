@@ -28,6 +28,11 @@
     color: $colorSecondary;
   }
 
+  &--light {
+    border-color: $colorDefaultInverted;
+    color: $colorDefaultInverted;
+  }
+
   &--link {
     color: $colorSecondary;
   }

@@ -26,14 +26,14 @@ var SimpleSlider = React.createClass({
             <img className="slider__item-img" src={details}/>
             <div className="slider__banner-content">
               <h2>Скидка 5% при заказе автозапчастей</h2>
-              <a href="#" className="btn btn--primary">Подробнее</a>
+              <a href="#" className="btn btn--ghost btn--light">Подробнее</a>
             </div>
           </div>
           <div className="slider__item">
             <img className="slider__item-img" src={servicio}/>
             <div className="slider__banner-content">
               <h2>Скидка 5% при заказе автозапчастей</h2>
-              <a href="#" className="btn btn--primary">Подробнее</a>
+              <a href="#" className="btn btn--ghost btn--light">Подробнее</a>
             </div>
           </div>
         </Slider>
