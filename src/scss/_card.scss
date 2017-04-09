@@ -7,6 +7,19 @@
   margin-bottom: 30px;
   @include clearfix;
 
+  &__top {
+    display: flex;
+
+    &-left {
+      float: left;
+      width: 30%;
+    }
+    &-right {
+      float: right;
+      width: 70%;
+    }
+  }
+
   &__left {
     box-sizing: border-box;
     float: left;
@@ -52,6 +65,10 @@
     font-family: 'PT Sans Caption', sans-serif;
     font-size: 22px;
     color: $colorPrimary;
+
+    &--micro {
+      font-size: 16px;
+    }
   }
 
   &__subtitle {
@@ -113,6 +130,34 @@
 
       &:hover {
         text-decoration: underline;
+      }
+    }
+  }
+
+  // table
+
+  &__table {
+    border: 1px solid #f7f7f7;
+    margin: 15px 0 30px;
+    width: 100%;
+
+    &-row {
+      background: #f7f7f7;
+      padding: 10px;
+      @include clearfix;
+
+      &:nth-child(odd) {
+        background: #fff;
+      }
+    }
+
+    &-cell {
+      float: left;
+
+      &:nth-child(2) {
+        float: right;
+        font-weight: bold;
+        color: $colorDefault;
       }
     }
   }

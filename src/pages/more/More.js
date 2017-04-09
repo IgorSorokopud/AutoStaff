@@ -23,8 +23,7 @@ class More extends Component {
                                 <div className="card__content">
                                     <div className="card__title">{user.name} {user.surname}</div>
                                     <div className="card__subtitle">Специализация: {user.specialization}</div>
-                                    <div
-                                        className="card__adress">{user.addres.city}, {user.addres.street}, {user.addres.number}</div>
+                                    <div className="card__adress">{user.addres.city}, {user.addres.street}, {user.addres.number}</div>
                                     <div className="card__description">{user.description}</div>
                                     <ul className="card__list">
                                         {user.options.map(function (list, index) {
@@ -43,7 +42,62 @@ class More extends Component {
 
                             <div className="card">
                                 <div className="card__content">
-                                    <div className="card__title">Отзывы</div>
+
+                                    <div className="card__title">Автомобиль</div>
+                                    <div className="card__table">
+                                        <div className="card__table-row">
+                                            <div className="card__table-cell">Марка</div>
+                                            <div className="card__table-cell">Ford</div>
+                                        </div>
+                                        <div className="card__table-row">
+                                            <div className="card__table-cell">Модель</div>
+                                            <div className="card__table-cell">Mustang</div>
+                                        </div>
+                                        <div className="card__table-row">
+                                            <div className="card__table-cell">Год</div>
+                                            <div className="card__table-cell">2012</div>
+                                        </div>
+                                        <div className="card__table-row">
+                                            <div className="card__table-cell">Пробег</div>
+                                            <div className="card__table-cell">168000</div>
+                                        </div>
+                                    </div>
+
+                                    <div className="card__title">Ошибки</div>
+                                    <div className="card__table">
+                                        <div className="card__table-row">
+                                            <div className="card__table-cell">Intake air temperature circuit range/performance problem</div>
+                                            <div className="card__table-cell">P0123</div>
+                                        </div>
+                                        <div className="card__table-row">
+                                            <div className="card__table-cell">Ignition Coil 'D' Secondary Circuit</div>
+                                            <div className="card__table-cell">P0123</div>
+                                        </div>
+                                        <div className="card__table-row">
+                                            <div className="card__table-cell">Intake air temperature circuit range/performance problem</div>
+                                            <div className="card__table-cell">P0123</div>
+                                        </div>
+                                        <div className="card__table-row">
+                                            <div className="card__table-cell">Secondary Circuit</div>
+                                            <div className="card__table-cell">P9513</div>
+                                        </div>
+                                        <div className="card__table-row">
+                                            <div className="card__table-cell">Intake air temperature circuit range/performance problem</div>
+                                            <div className="card__table-cell">P2123</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div className="card">
+                                <div className="card__content">
+                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,
+                                        New+York,NY&zoom=13&size=600x300&maptype=roadmap
+                                        &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.
+                                        711614,-74.012318
+                                        &markers=color:red%7Clabel:C%7C40.718217,-73.998284
+                                        &key=AIzaSyBARKCGndqyoBaMuM7UBnSplfFzZJINgGc"/>
                                 </div>
                             </div>
 
@@ -53,13 +107,6 @@ class More extends Component {
                             <div className="card">
                                 <div className="card__content">
                                     <img src={user.photo}/>
-
-                                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,
-                                        New+York,NY&zoom=13&size=600x300&maptype=roadmap
-                                        &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.
-                                        711614,-74.012318
-                                        &markers=color:red%7Clabel:C%7C40.718217,-73.998284
-                                        &key=AIzaSyBARKCGndqyoBaMuM7UBnSplfFzZJINgGc"/>
                                 </div>
                             </div>
                             <Sidebar />

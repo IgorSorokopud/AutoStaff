@@ -32,10 +32,7 @@ class ListService extends Component {
                                         <div className="card__subtitle">Специализация: {user.specialization}</div>
                                         <div className="card__adress">{user.addres.city}</div>
 
-                                        <div className="card__subtitle">{user.auto.brand}</div>
-                                        <div className="card__subtitle">{user.auto.model}</div>
-                                        <div className="card__subtitle">{user.auto.year}</div>
-                                        <div className="card__subtitle">{user.auto.mileage}</div>
+                                        <div>{user.auto.brand} {user.auto.model} {user.auto.year}</div>
 
                                         <div className="card__excerpt">{user.description}</div>
                                         <ul className="card__list">

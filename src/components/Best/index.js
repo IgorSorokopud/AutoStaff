@@ -15,8 +15,8 @@ class Best extends Component {
                             <div className="card__thumb best__img">
                                 <img className="card__thumb-img" src={user.photo}/>
                             </div>
-                            <Link to={`/more/${user.id}`} className="card__title">{user.name} {user.surname}</Link>
-                            <div className="card__subtitle">Специализация: {user.specialization}</div>
+                            <Link to={`/more/${user.id}`} className="card__title card__title--micro">{user.name} {user.surname}</Link>
+                            <div className="card__subtitle">{user.specialization}</div>
                             <div className="card__subtitle">Город: {user.addres.city}</div>
                         </div>
                     )
