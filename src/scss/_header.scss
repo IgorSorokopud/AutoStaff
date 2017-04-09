@@ -37,6 +37,23 @@
     }
   }
 
+  &__panel {
+    float: right;
+  }
+
+  &__user {
+    padding-top: 2px;
+
+    &-pic {
+      border: 1px solid #efefef;
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      float: left;
+      margin-right: 10px;
+    }
+  }
+
   &__hint {
     margin-right: 30px;
     line-height: 35px;
@@ -50,7 +67,7 @@
 
   &__buttons {
     float: right;
-    padding-top: 18px;
+    padding-top: 34px;
 
     a {
       margin-left: 10px;

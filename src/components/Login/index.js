@@ -66,8 +66,8 @@ class Login extends Component {
                                name="password"
                                placeholder="Пароль"/>
                     </div>
-                    <button className="btn btn--primary btn--full" type="submit">Войти</button>
-                    <a className="modal__forgot-password">Забыли пароль?</a>
+                    <button className="btn btn--primary btn--large" type="submit">Войти</button>
+                    <a className="btn btn--link btn--centered">Забыли пароль?</a>
                 </form>
             </div>
         );

@@ -9,7 +9,7 @@ class OrderCustomer extends Component {
                 <div className="main-container">
                     <div className="main-row">
                         <div className="main-content">
-                            <form className="form" name="order" method="post" action="">
+                            <form className="form form--main" name="order" method="post" action="">
 
                                 <h3>Заказ услуги</h3>
 
@@ -71,11 +71,15 @@ class OrderCustomer extends Component {
                                             </select>
                                         </div>
 
-                                        <label for="order__vin" className="">Дата</label>
-                                        <input type="text" name="vin"/>
+                                        <div className="form__elem">
+                                            <label for="order__vin" className="">Дата</label>
+                                            <input type="text" name="vin"/>
+                                        </div>
 
-                                        <label>Опишите что нужно делать...</label>
-                                        <textarea placeholder="Введите текст"></textarea>
+                                        <div className="form__elem">
+                                            <label>Опишите что нужно делать...</label>
+                                            <textarea placeholder="Введите текст"></textarea>
+                                        </div>
                                     </div>
                                 </div>
 

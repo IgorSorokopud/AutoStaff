@@ -27,11 +27,29 @@ class Header extends Component {
                         <div className="header__container">
                             <Link to={`/manual?customer`} className="header__hint">Как заказать ремонт</Link>
                             <Link to={`/manual?performer`} className="header__hint">Как стать исполнителем</Link>
-                            <div className="header__social">
-                                <a href="#" className="fa fa-facebook"></a>
-                                <a href="#" className="fa fa-twitter"></a>
-                                <a href="#" className="fa fa-google-plus"></a>
-                            </div>
+
+                            {this.props.state.startData.registered ?
+                                <div className="header__panel">
+                                    <div className="header__user">
+                                        <div className="header__user-pic">
+                                            <img src={defaultAvatar}/>
+                                        </div>
+                                        {this.props.state.startData.autorisation.name}
+                                        {this.props.state.startData.autorisation.type === 'executor' ?
+                                            <Link to={`/cabinetExecutor`} className="btn btn--link">Мой кабинет</Link>
+                                            :
+                                            <Link to={`/cabinet`} className="btn btn--link">Мой кабинет</Link>
+                                        } /
+                                        <a href="#" onClick={clearStorage} className="btn btn--link">Выйти</a>
+                                    </div>
+                                </div> :
+                                <div className="header__social">
+                                    <a href="#" className="fa fa-facebook"></a>
+                                    <a href="#" className="fa fa-twitter"></a>
+                                    <a href="#" className="fa fa-google-plus"></a>
+                                </div>
+                            }
+
                         </div>
                     </div>
 
@@ -45,17 +63,7 @@ class Header extends Component {
                         {/* buttons */}
                         {this.props.state.startData.registered ?
                             <div className="header__buttons">
-                                {this.props.state.startData.autorisation.name}
-                                <div className="small__userpic">
-                                    <img src={defaultAvatar}/>
-                                </div>
-                                {this.props.state.startData.autorisation.type === 'executor' ?
-                                    <Link to={`/cabinetExecutor`} className="">Мой кабинет</Link>
-                                    :
-                                    <Link to={`/cabinet`} className="">Мой кабинет</Link>
-                                }
                                 <Link to={`/order`} className="btn btn--primary">Подать заявку</Link>
-                                <a href="#" onClick={clearStorage} className="btn btn--primary">Выйти</a>
                             </div> :
                             <div className="header__buttons">
                                 <a href="#" onClick={login.bind(this, 'Registration')} className="btn btn--primary">Регистрация</a>
