@@ -17,6 +17,7 @@ class Best extends Component {
                             </div>
                             <Link to={`/more/${user.id}`} className="card__title">{user.name} {user.surname}</Link>
                             <div className="card__subtitle">Специализация: {user.specialization}</div>
+                            <div className="card__subtitle">Город: {user.addres.city}</div>
                         </div>
                     )
                 }.bind(this))}
