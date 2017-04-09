@@ -8,7 +8,6 @@ import { Link } from 'react-router';
 
 class ListService extends Component {
     render() {
-        console.log('state11', this.props.state.search);
 
         function login(data) {
             this.props.modal({mode: data, isShowingModal: true});
@@ -32,6 +31,12 @@ class ListService extends Component {
                                               className="card__title">{user.name} {user.surname}</Link>
                                         <div className="card__subtitle">Специализация: {user.specialization}</div>
                                         <div className="card__adress">{user.addres.city}</div>
+
+                                        <div className="card__subtitle">{user.auto.brand}</div>
+                                        <div className="card__subtitle">{user.auto.model}</div>
+                                        <div className="card__subtitle">{user.auto.year}</div>
+                                        <div className="card__subtitle">{user.auto.mileage}</div>
+
                                         <div className="card__excerpt">{user.description}</div>
                                         <ul className="card__list">
                                             {user.options.map(function (list, index) {
@@ -50,14 +55,9 @@ class ListService extends Component {
                                         <div className="card__buttons">
                                             {!this.props.users.registered ?
                                                 <a href="#" onClick={login.bind(this, 'Registration')}
-                                                   className="btn btn--link">Заказать услугу</a>
+                                                   className="btn btn--link">{user.type === "executor" ? 'Заказать услугу' : 'Выполнить заказ'}</a>
                                                 :
-                                                user.type === "executor" ?
-                                                    <Link to={`/order/`} className="btn btn--link">Заказать
-                                                        услугу</Link>
-                                                    :
-                                                    <Link to={`/order/`} className="btn btn--link">Выполнить
-                                                        заказ</Link>
+                                                <Link to={`/order/`} className="btn btn--link">{user.type === "executor" ? 'Заказать услугу' : 'Выполнить заказ'}</Link>
                                             }
                                             <Link to={`/more/${user.id}`} className="btn btn--link">Подробнее</Link>
                                             <Link to={`/more/${user.id}`} className="btn btn--link">Задать вопрос</Link>
@@ -67,7 +67,7 @@ class ListService extends Component {
                             </div>
                         );
 
-                        if (this.props.state.search === user.type && this.props.state.search !== 'all') {
+                        if (this.props.state.search === user.type) {
                             return item;
                         } else if (this.props.state.search === '') {
                             return item;
